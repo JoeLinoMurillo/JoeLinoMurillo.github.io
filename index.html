@@ -26,11 +26,11 @@
 
     header h1 { 
       margin:0; 
-      font-size:3.5em; /* slightly bigger */
+      font-size:3.5em; /* larger */
       font-family: 'Allura', cursive;
       color:#D5B954; 
       font-weight:500; 
-      font-style:italic;  /* elegant touch */
+      font-style:italic;  
       opacity:0;              
       transition: opacity 1.5s ease; 
     }
@@ -41,7 +41,7 @@
 
     header p { 
       margin:8px 0 0; 
-      font-size:1em;  /* smaller than name */
+      font-size:1em;  
       font-family: 'Montserrat', sans-serif; 
       color:#D5B954; 
       font-weight:400;
@@ -59,7 +59,16 @@
     }
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
-    .project h3 { margin:12px 0 5px; font-size:1.1em; color:#0A0A23; font-weight:500; }
+
+    .project h3 { 
+      margin:12px 0 5px; 
+      font-size:1.1em; 
+      color:#D5B954; 
+      font-weight:500; 
+      transition:color 0.2s; 
+    }
+    .project h3:hover { color:#BFA646; }
+
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
     a.button { 
@@ -97,12 +106,12 @@
   <!-- Header -->
   <header>
     <h1>Joe Lino Murillo</h1>
-    <p>Web Designer & WordPress Developer</p>
+    <p>Web Designer & WordPress Specialist</p>
   </header>
 
   <!-- Featured Projects (8) -->
   <section>
-    <h2>Featured Projects</h2>
+    <h2>My Featured Projects</h2>
     <div class="projects">
 
       <div class="project">
@@ -182,9 +191,7 @@
     <div class="bio-text">
       <h2>About Me</h2>
       <p>
-        I’m a web designer and WordPress developer focused on building clean, modern, and responsive websites.
-        From design to backend setup and plugin configuration, I bring brands to life online for businesses
-        and nonprofits. My portfolio spans e-commerce, medical, nonprofit, and professional services.
+        I’m a web designer and WordPress specialist who builds websites from the ground up. I handle everything — selecting color schemes, fonts, layouts, and implementing key features with plugins and tools like Elementor to ensure each site functions flawlessly. From motion effects to backend setup, I create websites that are not only visually appealing but also fully functional and user-friendly. My portfolio includes projects for medical practices, nonprofits, professional services, and more, each crafted to communicate trust, engagement, and creativity.
       </p>
     </div>
   </section>
@@ -222,3 +229,4 @@
 
 </body>
 </html>
+
