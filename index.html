@@ -6,7 +6,7 @@
   <title>Joe Lino Murillo - Web Design Portfolio</title>
 
   <!-- Google Font Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     body { 
@@ -14,20 +14,22 @@
       margin:0; padding:0; 
       background:#F5F5F5; 
       color:#333; 
+      font-weight:400;
     }
 
     header { 
-      background:#2AB7CA; 
+      background:#4A6CF7; 
       color:white; 
       padding:60px 20px; 
       text-align:center; 
+      font-weight:500;
     }
 
-    header h1 { margin:0; font-size:2.5em; letter-spacing:1px; }
-    header p { margin:10px 0 0; font-size:1.2em; }
+    header h1 { margin:0; font-size:2.5em; letter-spacing:1px; font-weight:600; }
+    header p { margin:10px 0 0; font-size:1.2em; font-weight:400; }
 
     section { max-width:1150px; margin:auto; padding:60px 20px; }
-    h2 { text-align:center; font-size:1.8em; margin-bottom:40px; color:#222; }
+    h2 { text-align:center; font-size:1.8em; margin-bottom:40px; color:#222; font-weight:500; }
 
     .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; }
     .project { 
@@ -37,15 +39,15 @@
     }
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
-    .project h3 { margin:12px 0 5px; font-size:1.1em; color:#2AB7CA; }
+    .project h3 { margin:12px 0 5px; font-size:1.1em; color:#4A6CF7; font-weight:500; }
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
     a.button { 
-      display:inline-block; background:#2AB7CA; color:white; 
+      display:inline-block; background:#4A6CF7; color:white; 
       padding:12px 28px; border-radius:6px; text-decoration:none; 
-      font-weight:600; margin-top:30px; transition:background 0.2s; 
+      font-weight:500; margin-top:30px; transition:background 0.2s; 
     }
-    a.button:hover { background:#1E8C99; }
+    a.button:hover { background:#3A52C2; }
 
     /* About Section */
     section#about { 
@@ -71,135 +73,73 @@
     <p>Web Designer & WordPress Developer</p>
   </header>
 
-  <!-- Featured Projects -->
+  <!-- Featured Projects (8) -->
   <section>
     <h2>Featured Projects</h2>
     <div class="projects">
 
-      <!-- 1 -->
       <div class="project">
         <a href="https://shopgraceandgoods.com/" target="_blank">
           <img src="furniture-store.png" alt="Furniture Store Website">
-          <h3>Grace & Goods — Furniture Store</h3>
+          <h3>Grace & Goods</h3>
         </a>
-        <p>Modern e-commerce website with product showcase and smooth UX.</p>
+        <p>Modern e-commerce website with smooth UX.</p>
       </div>
 
-      <!-- 2 -->
       <div class="project">
         <a href="https://brianmitchelldds.com/" target="_blank">
           <img src="dentistry-site.png" alt="Dentistry Website">
-          <h3>Dr. Brian Mitchell & Associates — Dentistry</h3>
+          <h3>Dr. Brian Mitchell & Associates</h3>
         </a>
-        <p>Professional and approachable design for a dental practice.</p>
+        <p>Professional and approachable design.</p>
       </div>
 
-      <!-- 3 -->
       <div class="project">
         <a href="https://westernerproducts.com/" target="_blank">
           <img src="roofing-site.png" alt="Roofing Website">
-          <h3>Westerner Products — Roofing Services</h3>
+          <h3>Westerner Products</h3>
         </a>
-        <p>Clean business design highlighting services and customer trust.</p>
+        <p>Clean business design highlighting services.</p>
       </div>
 
-      <!-- 4 -->
       <div class="project">
         <a href="https://patriot-insurance.com/" target="_blank">
           <img src="insurance-site.png" alt="Insurance Website">
-          <h3>Patriots Insurance — Insurance Services</h3>
+          <h3>Patriots Insurance</h3>
         </a>
-        <p>Clear, informative layout for clients comparing coverage options.</p>
+        <p>Clear layout for client coverage options.</p>
       </div>
 
-      <!-- 5 -->
       <div class="project">
         <a href="https://niflaleadershipsummit.com/" target="_blank">
           <img src="nifla-site.png" alt="NIFLA Website">
-          <h3>NIFLA Leadership Summit — Nonprofit / Advocacy</h3>
+          <h3>NIFLA Leadership Summit</h3>
         </a>
-        <p>Nonprofit advocacy website built for clarity and engagement.</p>
+        <p>Nonprofit advocacy website built for clarity.</p>
       </div>
 
-      <!-- 6 -->
       <div class="project">
         <a href="https://waterwalkersworldwide.org/" target="_blank">
           <img src="waterwalkers-site.png" alt="WaterWalkers Website">
-          <h3>Water Walkers Worldwide — Community / Faith-Based</h3>
+          <h3>Water Walkers Worldwide</h3>
         </a>
-        <p>Community outreach and faith-based design focused on impact.</p>
+        <p>Community and faith-based design.</p>
       </div>
 
-      <!-- 7 -->
       <div class="project">
         <a href="https://azgastroenterology.com/" target="_blank">
           <img src="gastroenterology-site.png" alt="Gastro Website">
-          <h3>AZ Gastroenterology — Medical / Gastroenterology</h3>
+          <h3>AZ Gastroenterology</h3>
         </a>
-        <p>Clean and professional medical layout with strong UX.</p>
+        <p>Clean professional medical layout.</p>
       </div>
 
-      <!-- 8 -->
       <div class="project">
         <a href="https://flutterinc.org/" target="_blank">
           <img src="flutter-site.png" alt="Flutter Website">
-          <h3>Flutter Inc. — Creative / Organization</h3>
+          <h3>Flutter Inc.</h3>
         </a>
-        <p>Modern creative site emphasizing design and user flow.</p>
-      </div>
-
-      <!-- 9 -->
-      <div class="project">
-        <a href="#" target="_blank">
-          <img src="pregnancy-site1.png" alt="Pregnancy Center Website">
-          <h3>New Hope Pregnancy Resource Center — Pregnancy Services</h3>
-        </a>
-        <p>Professional design supporting sensitive client services.</p>
-      </div>
-
-      <!-- 10 -->
-      <div class="project">
-        <a href="#" target="_blank">
-          <img src="pregnancy-site2.png" alt="Pregnancy Center Website">
-          <h3>North Star Women’s Center — Pregnancy Services</h3>
-        </a>
-        <p>Clean and approachable nonprofit website.</p>
-      </div>
-
-      <!-- 11 -->
-      <div class="project">
-        <a href="#" target="_blank">
-          <img src="painting-site.png" alt="Painting Website">
-          <h3>SETR Painting — Painting & Contracting</h3>
-        </a>
-        <p>Professional portfolio and service showcase for painting company.</p>
-      </div>
-
-      <!-- 12 -->
-      <div class="project">
-        <a href="#" target="_blank">
-          <img src="tjs-site.png" alt="Legal Website">
-          <h3>The Justice Foundation — Legal / Advocacy</h3>
-        </a>
-        <p>Informative and trustworthy design for legal services.</p>
-      </div>
-
-      <!-- 13 -->
-      <div class="project">
-        <a href="#" target="_blank">
-          <img src="pregnancy-site3.png" alt="Pregnancy Center Website">
-          <h3>New Beginnings Pregnancy Help Center — Pregnancy Services</h3>
-        </a>
-        <p>Professional design supporting sensitive client services.</p>
-      </div>
-
-      <!-- 14 -->
-      <div class="project">
-        <a href="#" target="_blank">
-          <img src="pregnancy-site4.png" alt="Pregnancy Center Website">
-          <h3>Heartbeat Miami — Pregnancy Services</h3>
-        </a>
-        <p>Clean, approachable nonprofit design.</p>
+        <p>Modern creative site emphasizing design.</p>
       </div>
 
     </div>
@@ -217,8 +157,7 @@
       <p>
         I’m a web designer and WordPress developer focused on building clean, modern, and responsive websites.
         From design to backend setup and plugin configuration, I bring brands to life online for both businesses
-        and nonprofits. My portfolio includes projects for pregnancy centers, medical practices, and professional
-        services — each crafted to communicate trust and connection.
+        and nonprofits. My portfolio includes projects across e-commerce, medical, nonprofit, and professional services.
       </p>
     </div>
   </section>
@@ -226,4 +165,10 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Get In Touch</h2>
-    <p>Let’s talk about your next project or opportunity — I’d love to
+    <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
+    <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
+  </section>
+
+</body>
+</html>
+
