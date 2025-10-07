@@ -20,7 +20,6 @@
     /* Header */
     header { 
       background:#000000; /* Dark Black */
-      color:#D5B954; /* Gold */
       padding:60px 20px; 
       text-align:center; 
     }
@@ -28,9 +27,15 @@
     header h1 { 
       margin:0; 
       font-size:3.2em; 
-      font-family: 'Allura', cursive; /* Elegant script for name */
+      font-family: 'Allura', cursive;
       color:#D5B954; 
-      font-weight:400; /* Lighter weight */
+      font-weight:500; 
+      opacity:0;              /* fade-in start */
+      transition: opacity 1.5s ease; /* fade-in duration */
+    }
+
+    header h1.visible {
+      opacity:1; /* fade-in visible */
     }
 
     header p { 
@@ -196,6 +201,14 @@
   </div>
 
   <script>
+    // Fade-in header name on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const headerName = document.querySelector('header h1');
+      setTimeout(() => {
+        headerName.classList.add('visible');
+      }, 300);
+    });
+
     // Fade-in signature when scrolling to bottom
     window.addEventListener('scroll', function() {
       const signature = document.getElementById('signature');
