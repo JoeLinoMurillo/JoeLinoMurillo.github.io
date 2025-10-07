@@ -26,10 +26,10 @@
 
     header h1 { 
       margin:0; 
-      font-size:3.5em; /* larger */
+      font-size:3.5em; 
       font-family: 'Allura', cursive;
       color:#D5B954; 
-      font-weight:500; 
+      font-weight:600;  /* slightly heavier */
       font-style:italic;  
       opacity:0;              
       transition: opacity 1.5s ease; 
@@ -58,16 +58,16 @@
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
 
-    .project h3 { 
-      margin:12px 0 5px; 
-      font-size:1.1em; 
-      font-weight:500; 
+    .project h3 a {
+      color: #333; /* dark text for project titles */
       text-decoration: underline; 
       text-decoration-color: #D5B954; 
       text-decoration-thickness: 2px;
       transition: text-decoration-color 0.2s;
     }
-    .project h3:hover { text-decoration-color: #BFA646; }
+    .project h3 a:hover {
+      text-decoration-color: #BFA646; /* slightly darker gold on hover */
+    }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
@@ -118,7 +118,7 @@
       <div class="project">
         <a href="https://shopgraceandgoods.com/" target="_blank">
           <img src="furniture-store.png" alt="Furniture Store Website">
-          <h3>Grace & Goods</h3>
+          <h3><a href="https://shopgraceandgoods.com/" target="_blank">Grace & Goods</a></h3>
         </a>
         <p>Modern e-commerce website with smooth UX.</p>
       </div>
@@ -126,7 +126,7 @@
       <div class="project">
         <a href="https://brianmitchelldds.com/" target="_blank">
           <img src="dentistry-site.png" alt="Dentistry Website">
-          <h3>Dr. Brian Mitchell & Associates</h3>
+          <h3><a href="https://brianmitchelldds.com/" target="_blank">Dr. Brian Mitchell & Associates</a></h3>
         </a>
         <p>Professional and approachable design.</p>
       </div>
@@ -134,7 +134,7 @@
       <div class="project">
         <a href="https://westernerproducts.com/" target="_blank">
           <img src="roofing-site.png" alt="Roofing Website">
-          <h3>Westerner Products</h3>
+          <h3><a href="https://westernerproducts.com/" target="_blank">Westerner Products</a></h3>
         </a>
         <p>Clean business design highlighting services.</p>
       </div>
@@ -142,7 +142,7 @@
       <div class="project">
         <a href="https://patriot-insurance.com/" target="_blank">
           <img src="insurance-site.png" alt="Insurance Website">
-          <h3>Patriots Insurance</h3>
+          <h3><a href="https://patriot-insurance.com/" target="_blank">Patriots Insurance</a></h3>
         </a>
         <p>Clear layout for client coverage options.</p>
       </div>
@@ -150,7 +150,7 @@
       <div class="project">
         <a href="https://niflaleadershipsummit.com/" target="_blank">
           <img src="nifla-site.png" alt="NIFLA Website">
-          <h3>NIFLA Leadership Summit</h3>
+          <h3><a href="https://niflaleadershipsummit.com/" target="_blank">NIFLA Leadership Summit</a></h3>
         </a>
         <p>Nonprofit advocacy website built for clarity.</p>
       </div>
@@ -158,7 +158,7 @@
       <div class="project">
         <a href="https://waterwalkersworldwide.org/" target="_blank">
           <img src="waterwalkers-site.png" alt="WaterWalkers Website">
-          <h3>Water Walkers Worldwide</h3>
+          <h3><a href="https://waterwalkersworldwide.org/" target="_blank">Water Walkers Worldwide</a></h3>
         </a>
         <p>Community and faith-based design.</p>
       </div>
@@ -166,7 +166,7 @@
       <div class="project">
         <a href="https://azgastroenterology.com/" target="_blank">
           <img src="gastroenterology-site.png" alt="Gastro Website">
-          <h3>AZ Gastroenterology</h3>
+          <h3><a href="https://azgastroenterology.com/" target="_blank">AZ Gastroenterology</a></h3>
         </a>
         <p>Clean professional medical layout.</p>
       </div>
@@ -174,7 +174,7 @@
       <div class="project">
         <a href="https://flutterinc.org/" target="_blank">
           <img src="flutter-site.png" alt="Flutter Website">
-          <h3>Flutter Inc.</h3>
+          <h3><a href="https://flutterinc.org/" target="_blank">Flutter Inc.</a></h3>
         </a>
         <p>Modern creative site emphasizing design.</p>
       </div>
