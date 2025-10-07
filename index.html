@@ -19,7 +19,7 @@
 
     /* Header */
     header { 
-      background:#000000; /* Dark Black */
+      background:#000; 
       padding:60px 20px; 
       text-align:center; 
     }
@@ -29,13 +29,14 @@
       font-size:3.5em; 
       font-family: 'Allura', cursive;
       color:#D5B954; 
-      font-weight:600;  /* slightly heavier */
+      font-weight:500;  
       font-style:italic;  
+      letter-spacing:2px; 
       opacity:0;              
       transition: opacity 1.5s ease; 
     }
 
-    header h1.visible { opacity:1; } /* fade-in */
+    header h1.visible { opacity:1; }
 
     header p { 
       margin:8px 0 0; 
@@ -59,15 +60,13 @@
     .project img { width:100%; border-radius:10px 10px 0 0; }
 
     .project h3 a {
-      color: #333; /* dark text for project titles */
+      color: #333; 
       text-decoration: underline; 
       text-decoration-color: #D5B954; 
       text-decoration-thickness: 2px;
       transition: text-decoration-color 0.2s;
     }
-    .project h3 a:hover {
-      text-decoration-color: #BFA646; /* slightly darker gold on hover */
-    }
+    .project h3 a:hover { text-decoration-color: #BFA646; }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
@@ -110,7 +109,7 @@
     <p>Web Designer & WordPress Specialist</p>
   </header>
 
-  <!-- Featured Projects (8) -->
+  <!-- Featured Projects -->
   <section>
     <h2>My Featured Projects</h2>
     <div class="projects">
@@ -213,9 +212,7 @@
     // Fade-in header name on load
     window.addEventListener('DOMContentLoaded', () => {
       const headerName = document.querySelector('header h1');
-      setTimeout(() => {
-        headerName.classList.add('visible');
-      }, 300);
+      setTimeout(() => { headerName.classList.add('visible'); }, 300);
     });
 
     // Fade-in signature when scrolling to bottom
