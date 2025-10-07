@@ -12,42 +12,43 @@
     body { 
       font-family: 'Montserrat', Arial, sans-serif; 
       margin:0; padding:0; 
-      background:#F5F5F5; 
-      color:#333; 
+      background:#1C1C1C; /* Dark background */
+      color:#EEE; 
       font-weight:400;
     }
 
     header { 
-      background:#4A6CF7; 
-      color:white; 
+      background:#0A0A23; /* Dark Blue / Near Black */
+      color:#D5B954; /* Gold for name/title */
       padding:60px 20px; 
       text-align:center; 
       font-weight:500;
     }
 
-    header h1 { margin:0; font-size:2.5em; letter-spacing:1px; font-weight:600; }
-    header p { margin:10px 0 0; font-size:1.2em; font-weight:400; }
+    header h1 { margin:0; font-size:2.5em; letter-spacing:1px; font-weight:600; color:#D5B954; }
+    header p { margin:10px 0 0; font-size:1.2em; font-weight:400; color:#D5B954; }
 
     section { max-width:1150px; margin:auto; padding:60px 20px; }
-    h2 { text-align:center; font-size:1.8em; margin-bottom:40px; color:#222; font-weight:500; }
+    h2 { text-align:center; font-size:1.8em; margin-bottom:40px; color:#EEE; font-weight:500; }
 
     .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; }
     .project { 
       background:white; border-radius:10px; width:260px; 
-      box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:transform 0.2s ease; 
+      box-shadow:0 2px 8px rgba(0,0,0,0.3); transition:transform 0.2s ease; 
       text-align:center; 
+      color:#333; 
     }
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
-    .project h3 { margin:12px 0 5px; font-size:1.1em; color:#4A6CF7; font-weight:500; }
+    .project h3 { margin:12px 0 5px; font-size:1.1em; color:#0A0A23; font-weight:500; }
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
     a.button { 
-      display:inline-block; background:#4A6CF7; color:white; 
+      display:inline-block; background:#D5B954; color:#0A0A23; 
       padding:12px 28px; border-radius:6px; text-decoration:none; 
       font-weight:500; margin-top:30px; transition:background 0.2s; 
     }
-    a.button:hover { background:#3A52C2; }
+    a.button:hover { background:#BFA646; }
 
     /* About Section */
     section#about { 
@@ -56,12 +57,13 @@
     }
     .bio-photo { 
       width:180px; height:180px; border-radius:50%; object-fit:cover; 
-      box-shadow:0 2px 10px rgba(0,0,0,0.15); 
+      box-shadow:0 2px 10px rgba(0,0,0,0.3); 
     }
-    .bio-text { max-width:600px; text-align:center; }
+    .bio-text { max-width:600px; text-align:center; color:#EEE; }
 
-    section#contact { background:#f1f1f1; text-align:center; padding:70px 20px; border-top:1px solid #ddd; }
-    section#contact h2 { margin-bottom:15px; }
+    section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #333; }
+    section#contact h2 { margin-bottom:15px; color:#D5B954; }
+    section#contact p { color:#EEE; }
 
   </style>
 </head>
@@ -156,8 +158,8 @@
       <h2>About Me</h2>
       <p>
         I’m a web designer and WordPress developer focused on building clean, modern, and responsive websites.
-        From design to backend setup and plugin configuration, I bring brands to life online for both businesses
-        and nonprofits. My portfolio includes projects across e-commerce, medical, nonprofit, and professional services.
+        From design to backend setup and plugin configuration, I bring brands to life online for businesses
+        and nonprofits. My portfolio spans e-commerce, medical, nonprofit, and professional services.
       </p>
     </div>
   </section>
@@ -171,4 +173,3 @@
 
 </body>
 </html>
-
