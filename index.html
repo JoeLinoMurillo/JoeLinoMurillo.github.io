@@ -26,13 +26,13 @@
 
     header h1 { 
       margin:0; 
-      font-size:2.5em;           /* slightly smaller */
+      font-size:2.5em;
       font-family: 'Montserrat', sans-serif;
       color:#D5B954; 
       font-weight:600;  
       text-transform: uppercase; 
-      letter-spacing:0.2px;      /* tighter letters */
-      opacity:0;              
+      letter-spacing:0.2px;
+      opacity:0;
       transition: opacity 1.5s ease; 
     }
 
@@ -40,7 +40,7 @@
 
     header p { 
       margin:8px 0 0; 
-      font-size:1.4em;           /* slightly bigger */
+      font-size:1.4em;
       font-family: 'Montserrat', sans-serif; 
       color:#D5B954; 
       font-weight:400;
@@ -63,7 +63,7 @@
       color: #333; 
       text-decoration: none; 
       transition: color 0.2s;
-      border-bottom: 2px solid #D5B954; /* gold underline */
+      border-bottom: 2px solid #D5B954;
       padding-bottom:2px;
     }
     .project h3 a:hover { color: #D5B954; }
@@ -95,9 +95,20 @@
     section#contact p { color:#EEE; }
 
     /* Signature */
-    .signature-container { text-align:center; margin:60px 0; opacity:0; transition: opacity 1s ease; }
-    .signature-container img { max-width:300px; }
-    .signature-container.visible { opacity:1; }
+    .signature-container {
+      text-align: center;
+      margin: 60px 0;
+      opacity: 0;
+      transition: opacity 2s ease-in-out; /* smoother 2s fade-in */
+    }
+
+    .signature-container img {
+      max-width: 300px;
+    }
+
+    .signature-container.visible {
+      opacity: 1;
+    }
 
   </style>
 </head>
