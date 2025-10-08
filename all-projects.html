@@ -27,21 +27,24 @@
     header h1 { 
       margin:0; 
       font-size:2.5em;
+      font-family: 'Montserrat', sans-serif;
+      color:#D5B954; 
       font-weight:600;  
       text-transform: uppercase; 
-      color:#D5B954;
+      letter-spacing:0.2px;
     }
 
     header p { 
       margin:8px 0 0; 
-      font-size:1.4em; 
+      font-size:1.4em;
+      font-family: 'Montserrat', sans-serif; 
       color:#D5B954; 
       font-weight:400;
     }
 
     section { max-width:1150px; margin:auto; padding:60px 20px; }
     h2 { text-align:center; font-size:1.8em; margin-bottom:10px; color:#EEE; font-weight:500; }
-    .tagline { text-align:center; color:#AAA; margin-bottom:40px; }
+    .tagline { text-align:center; color:#CCC; margin-bottom:40px; }
 
     .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; margin-bottom:40px; }
     .project { 
@@ -54,17 +57,9 @@
     .project img { width:100%; border-radius:10px 10px 0 0; }
 
     .project h3 {
-      margin:10px 0;
-      font-size:1.1em;
-    }
-
-    .project a {
-      color: #000;
+      margin: 10px 0 0;
+      color: #000; 
       text-decoration: none;
-    }
-
-    .project a:hover {
-      color: #555; /* subtle hover color */
     }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
@@ -76,26 +71,44 @@
     }
     a.button:hover { background:#BFA646; }
 
-    .category { margin-bottom:60px; }
+    /* Outline style button */
+    a.button-outline {
+      display: inline-block;
+      background: transparent;
+      color: #D5B954;
+      border: 2px solid #D5B954;
+      padding: 10px 26px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    a.button-outline:hover {
+      background: #D5B954;
+      color: #000;
+    }
 
-    /* CTA Section */
-    section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #333; margin-top:40px; }
-    section#contact h2 { margin-bottom:15px; color:#D5B954; }
-    section#contact p { color:#EEE; }
-    section#contact a.button { margin-top:20px; }
+    .category { margin-bottom:60px; }
+    .category h2 { margin-bottom:10px; }
 
     /* Signature */
     .signature-container {
       text-align: center;
-      margin:40px 0;
+      margin: 40px 0;
     }
-
     .signature-container img {
       max-width: 250px;
     }
 
-    /* Back to Home */
-    .back-home { text-align:center; margin-bottom:60px; }
+    /* CTA Section */
+    .cta-section {
+      background:#111;
+      text-align:center;
+      padding:60px 20px;
+      margin-bottom:40px;
+    }
+    .cta-section h2 { margin-bottom:15px; color:#D5B954; }
+    .cta-section p { color:#EEE; margin-bottom:20px; }
   </style>
 </head>
 <body>
@@ -103,7 +116,7 @@
   <!-- Header -->
   <header>
     <h1>All Projects</h1>
-    <p>Explore my full portfolio — click any image to visit the website.</p>
+    <p class="tagline">Explore my full portfolio — click any image to visit the website.</p>
   </header>
 
   <!-- Professional Services -->
@@ -219,20 +232,20 @@
   </section>
 
   <!-- CTA Section -->
-  <section id="contact">
+  <section class="cta-section">
     <h2>Get In Touch</h2>
     <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
     <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
   </section>
 
   <!-- Signature -->
-  <div class="signature-container">
+  <div class="signature-container" id="signature">
     <img src="signature.png" alt="Joe Lino Murillo Signature">
   </div>
 
-  <!-- Back to Home -->
-  <div class="back-home">
-    <a href="index.html" class="button">Back to Home</a>
+  <!-- Back to Home Button -->
+  <div style="text-align:center; margin-bottom:60px;">
+    <a href="index.html" class="button-outline">Back to Home</a>
   </div>
 
 </body>
