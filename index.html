@@ -46,22 +46,33 @@
       font-weight:400;
     }
 
-    section { max-width:1150px; margin:auto; padding:60px 20px; }
-    h2 { text-align:center; font-size:1.8em; margin-bottom:40px; font-weight:500; }
-
-    /* Featured Projects Section */
-    .projects-wrapper {
-      background: #fff; /* full-width white background */
-      width: 100%;
-      padding: 60px 20px;
+    /* Generic container for centered content */
+    .container {
+      max-width:1150px;
+      margin:auto;
+      padding:0 20px;
       box-sizing: border-box;
     }
 
-    .projects-wrapper h2 {
-      color: #000; /* same color as header background */
+    h2 { text-align:center; font-size:1.8em; margin-bottom:40px; font-weight:500; }
+
+    /* Featured Projects Full Width */
+    .projects-wrapper {
+      background:#fff;
+      width:100%;
+      padding:60px 0;
     }
 
-    .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; }
+    .projects-wrapper h2 {
+      color:#000; /* same as header background */
+    }
+
+    .projects {
+      display:flex;
+      flex-wrap:wrap;
+      gap:25px;
+      justify-content:center;
+    }
 
     .project { 
       background:#000; border-radius:10px; width:260px; 
@@ -97,7 +108,7 @@
     section#about { 
       background:#fff; /* white background */
       text-align:center; 
-      padding-bottom:60px; 
+      padding:60px 20px; 
     }
     section#about h2, .bio-text p {
       color:#000; /* black text */
@@ -110,33 +121,32 @@
     }
     .bio-text { max-width:700px; margin:auto; }
 
-    /* Contact Section */
-    section#contact {
-      background:#111; /* full-width black */
+    /* Contact Full Width */
+    .contact-wrapper {
+      background:#111;
       width:100%;
-      padding:70px 20px;
-      text-align:center;
+      padding:70px 0;
     }
-    section#contact h2 { margin-bottom:15px; color:#D5B954; }
-    section#contact p { color:#EEE; }
+    .contact-wrapper h2 { margin-bottom:15px; color:#D5B954; text-align:center; }
+    .contact-wrapper p { color:#EEE; text-align:center; }
+    .contact-wrapper .button { display:block; margin:20px auto 0; }
 
-    /* Signature Section */
+    /* Signature Section Full Width */
     .signature-container {
-      background: #fff; /* full-width white */
-      text-align: center;
-      margin: 60px 0;
-      opacity: 0;
-      transition: opacity 2s ease-in-out;
-      padding: 40px 0;
+      background:#fff;
+      width:100%;
+      text-align:center;
+      margin:60px 0;
+      opacity:0;
+      transition:opacity 2s ease-in-out;
+      padding:40px 0;
     }
-
     .signature-container img {
-      max-width: 300px;
-      filter: brightness(0) invert(0); /* ensures black signature on white */
+      max-width:300px;
+      filter: brightness(0) invert(0); /* black signature on white */
     }
-
     .signature-container.visible {
-      opacity: 1;
+      opacity:1;
     }
 
   </style>
@@ -150,8 +160,8 @@
   </header>
 
   <!-- Featured Projects -->
-  <section id="projects">
-    <div class="projects-wrapper">
+  <div class="projects-wrapper">
+    <div class="container">
       <h2>My Featured Projects</h2>
       <div class="projects">
 
@@ -220,52 +230,12 @@
         </div>
 
       </div>
-
       <div style="text-align:center;">
         <a href="all-projects.html" class="button">See All Projects</a>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- About Section -->
   <section id="about">
-    <img src="bio-photo.jpg" alt="Joe Lino Murillo" class="bio-photo">
-    <div class="bio-text">
-      <h2>About Me</h2>
-      <p>
-        I’m a web designer and WordPress specialist who builds websites from the ground up. I handle everything — selecting color schemes, fonts, layouts, and implementing key features with plugins and tools like Elementor to ensure each site functions flawlessly. From motion effects to backend setup, I create websites that are not only visually appealing but also fully functional and user-friendly. My portfolio includes projects for medical practices, nonprofits, professional services, and more, each crafted to communicate trust, engagement, and creativity.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Get In Touch</h2>
-    <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
-    <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
-  </section>
-
-  <!-- Signature -->
-  <div class="signature-container" id="signature">
-    <img src="signature.png" alt="Joe Lino Murillo Signature">
-  </div>
-
-  <script>
-    // Fade-in header name on load
-    window.addEventListener('DOMContentLoaded', () => {
-      const headerName = document.querySelector('header h1');
-      setTimeout(() => { headerName.classList.add('visible'); }, 300);
-    });
-
-    // Fade-in signature when scrolling to bottom
-    window.addEventListener('scroll', function() {
-      const signature = document.getElementById('signature');
-      const rect = signature.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 50){
-        signature.classList.add('visible');
-      }
-    });
-  </script>
-
-</body>
-</html>
+    <img src="bio-photo.jpg" alt
