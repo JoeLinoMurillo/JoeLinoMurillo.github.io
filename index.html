@@ -63,19 +63,26 @@
       color: #333; 
       text-decoration: none; 
       transition: color 0.2s;
-      /* border-bottom: 2px solid #D5B954; */ /* removed underline */
+      /* border-bottom removed */
       padding-bottom:2px;
     }
     .project h3 a:hover { color: #D5B954; }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
-    a.button { 
-      display:inline-block; background:#D5B954; color:#000; 
-      padding:12px 28px; border-radius:6px; text-decoration:none; 
-      font-weight:500; margin-top:30px; transition:background 0.2s; 
+    /* See All Projects Button */
+    .projects + div a.button {
+      display:inline-block;
+      background:#D5B954; 
+      color:#000; 
+      padding:14px 32px; /* slightly bigger */
+      border-radius:6px; 
+      text-decoration:none; 
+      font-weight:500; 
+      margin-top:40px; /* more separation */
+      transition:background 0.2s; 
     }
-    a.button:hover { background:#BFA646; }
+    .projects + div a.button:hover { background:#BFA646; }
 
     /* About Section */
     section#about { 
@@ -88,6 +95,7 @@
       margin-bottom:20px;
     }
     .bio-text { max-width:700px; margin:auto; color:#EEE; }
+    .bio-text p { line-height:1.6; } /* added spacing between lines */
 
     /* Contact Section */
     section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #333; }
@@ -99,11 +107,11 @@
       text-align: center;
       margin: 60px 0;
       opacity: 0;
-      transition: opacity 2s ease-in-out; /* smoother 2s fade-in */
+      transition: opacity 2s ease-in-out;
     }
 
     .signature-container img {
-      max-width: 300px;
+      max-width: 250px; /* slightly smaller */
     }
 
     .signature-container.visible {
