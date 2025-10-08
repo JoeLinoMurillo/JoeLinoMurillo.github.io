@@ -56,15 +56,15 @@
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
 
-    .project h3 a {
-      color: #000 !important; /* Black titles */
-      text-decoration: none;
-      transition: color 0.2s;
-      padding-bottom:2px;
-      display:block;
-      margin-top:10px;
+    /* Fix: Titles black by default */
+    .project h3 {
+      color: #000;
+      margin: 10px 0 5px;
+      font-size: 1.1em;
     }
-    .project h3 a:hover { color: #D5B954 !important; }
+    .project:hover h3 {
+      color: #D5B954;
+    }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
