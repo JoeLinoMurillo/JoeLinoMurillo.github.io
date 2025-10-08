@@ -27,24 +27,21 @@
     header h1 { 
       margin:0; 
       font-size:2.5em;
-      font-family: 'Montserrat', sans-serif;
-      color:#D5B954; 
       font-weight:600;  
       text-transform: uppercase; 
-      letter-spacing:0.2px;
+      color:#D5B954;
     }
 
     header p { 
       margin:8px 0 0; 
-      font-size:1.4em;
-      font-family: 'Montserrat', sans-serif; 
+      font-size:1.4em; 
       color:#D5B954; 
       font-weight:400;
     }
 
     section { max-width:1150px; margin:auto; padding:60px 20px; }
     h2 { text-align:center; font-size:1.8em; margin-bottom:10px; color:#EEE; font-weight:500; }
-    .tagline { text-align:center; color:#CCC; margin-bottom:30px; }
+    .tagline { text-align:center; color:#AAA; margin-bottom:40px; }
 
     .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; margin-bottom:40px; }
     .project { 
@@ -56,13 +53,18 @@
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
 
-    /* Fix titles: black, no underline */
-    .project h3 a,
-    .project h3 a:visited,
-    .project h3 a:hover,
-    .project h3 a:active {
+    .project h3 {
+      margin:10px 0;
+      font-size:1.1em;
+    }
+
+    .project a {
       color: #000;
       text-decoration: none;
+    }
+
+    .project a:hover {
+      color: #555; /* subtle hover color */
     }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
@@ -75,29 +77,25 @@
     a.button:hover { background:#BFA646; }
 
     .category { margin-bottom:60px; }
-    .category h2 { margin-bottom:10px; }
 
     /* CTA Section */
-    section#contact { background:#111; text-align:center; padding:70px 20px; margin-bottom:40px; }
+    section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #333; margin-top:40px; }
     section#contact h2 { margin-bottom:15px; color:#D5B954; }
     section#contact p { color:#EEE; }
-    
+    section#contact a.button { margin-top:20px; }
+
     /* Signature */
     .signature-container {
       text-align: center;
-      margin: 40px 0;
-      opacity: 0;
-      transition: opacity 2s ease-in-out;
+      margin:40px 0;
     }
 
     .signature-container img {
-      max-width: 200px; /* smaller signature */
+      max-width: 250px;
     }
 
-    .signature-container.visible {
-      opacity: 1;
-    }
-
+    /* Back to Home */
+    .back-home { text-align:center; margin-bottom:60px; }
   </style>
 </head>
 <body>
@@ -228,25 +226,14 @@
   </section>
 
   <!-- Signature -->
-  <div class="signature-container" id="signature">
+  <div class="signature-container">
     <img src="signature.png" alt="Joe Lino Murillo Signature">
   </div>
 
   <!-- Back to Home -->
-  <div style="text-align:center; margin-bottom:60px;">
+  <div class="back-home">
     <a href="index.html" class="button">Back to Home</a>
   </div>
-
-  <script>
-    // Fade-in signature when scrolling to bottom
-    window.addEventListener('scroll', function() {
-      const signature = document.getElementById('signature');
-      const rect = signature.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 50){
-        signature.classList.add('visible');
-      }
-    });
-  </script>
 
 </body>
 </html>
