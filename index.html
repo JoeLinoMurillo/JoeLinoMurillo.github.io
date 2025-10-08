@@ -27,7 +27,6 @@
     header h1 { 
       margin:0; 
       font-size:2.5em;
-      font-family: 'Montserrat', sans-serif;
       color:#D5B954; 
       font-weight:600;  
       text-transform: uppercase; 
@@ -40,8 +39,7 @@
 
     header p { 
       margin:8px 0 0; 
-      font-size:1.4em;
-      font-family: 'Montserrat', sans-serif; 
+      font-size:1.4em; 
       color:#D5B954; 
       font-weight:400;
     }
@@ -92,6 +90,7 @@
       background:#fff;
       color:#000;
     }
+    section#about h2 { color:#000 !important; } /* Ensure About Me title is black */
     .bio-photo { 
       width:180px; height:180px; border-radius:50%; object-fit:cover; 
       box-shadow:0 2px 10px rgba(0,0,0,0.3); 
@@ -99,17 +98,14 @@
     }
     .bio-text { max-width:700px; margin:auto; line-height:1.6; color:#000; }
 
-    /* Signature under About Me (black) */
+    /* Signature under About Me */
     .signature-about { 
       text-align:center; 
       margin:30px 0; 
       opacity:0; 
       transition: opacity 2s ease-in-out; 
     }
-    .signature-about img { 
-      max-width:250px; 
-      filter: brightness(0); /* Makes the transparent PNG black */
-    }
+    .signature-about img { max-width:250px; filter: brightness(0) invert(0); } /* black signature */
     .signature-about.visible { opacity:1; }
 
     /* Full-width CTA Section */
@@ -118,7 +114,7 @@
       text-align:center; 
       padding:70px 20px; 
       background:#111; 
-      margin-top:30px;
+      margin-top:30px; /* separation from About Me */
     }
     .cta-container h2 { color:#D5B954; margin-bottom:20px; }
     .cta-container p { color:#EEE; font-size:1.1em; margin-bottom:20px; }
@@ -139,7 +135,6 @@
     <h2>Featured Projects</h2>
     <div class="projects-tagline">Explore my work — click any image to visit the website.</div>
     <div class="projects">
-
       <div class="project">
         <a href="https://shopgraceandgoods.com/" target="_blank">
           <img src="furniture-store.png" alt="Furniture Store Website">
@@ -147,7 +142,6 @@
         </a>
         <p>Modern e-commerce website with smooth UX.</p>
       </div>
-
       <div class="project">
         <a href="https://brianmitchelldds.com/" target="_blank">
           <img src="dentistry-site.png" alt="Dentistry Website">
@@ -155,7 +149,6 @@
         </a>
         <p>Professional and approachable design.</p>
       </div>
-
       <div class="project">
         <a href="https://westernerproducts.com/" target="_blank">
           <img src="roofing-site.png" alt="Roofing Website">
@@ -163,7 +156,6 @@
         </a>
         <p>Clean business design highlighting services.</p>
       </div>
-
       <div class="project">
         <a href="https://patriot-insurance.com/" target="_blank">
           <img src="insurance-site.png" alt="Insurance Website">
@@ -171,7 +163,6 @@
         </a>
         <p>Clear layout for client coverage options.</p>
       </div>
-
       <div class="project">
         <a href="https://niflaleadershipsummit.com/" target="_blank">
           <img src="nifla-site.png" alt="NIFLA Website">
@@ -179,7 +170,6 @@
         </a>
         <p>Nonprofit advocacy website built for clarity.</p>
       </div>
-
       <div class="project">
         <a href="https://waterwalkersworldwide.org/" target="_blank">
           <img src="waterwalkers-site.png" alt="WaterWalkers Website">
@@ -187,7 +177,6 @@
         </a>
         <p>Community and faith-based design.</p>
       </div>
-
       <div class="project">
         <a href="https://azgastroenterology.com/" target="_blank">
           <img src="gastroenterology-site.png" alt="Gastro Website">
@@ -195,7 +184,6 @@
         </a>
         <p>Clean professional medical layout.</p>
       </div>
-
       <div class="project">
         <a href="https://flutterinc.org/" target="_blank">
           <img src="flutter-site.png" alt="Flutter Website">
@@ -203,9 +191,7 @@
         </a>
         <p>Modern creative site emphasizing design.</p>
       </div>
-
     </div>
-
     <div style="text-align:center;">
       <a href="all-projects.html" class="button">See All Projects</a>
     </div>
@@ -220,8 +206,7 @@
         I’m a web designer and WordPress specialist who builds websites from the ground up. I handle everything — selecting color schemes, fonts, layouts, and implementing key features with plugins and tools like Elementor to ensure each site functions flawlessly. From motion effects to backend setup, I create websites that are not only visually appealing but also fully functional and user-friendly. My portfolio includes projects for medical practices, nonprofits, professional services, and more, each crafted to communicate trust, engagement, and creativity.
       </p>
     </div>
-
-    <!-- Signature under About -->
+    <!-- Black Signature under About -->
     <div class="signature-about" id="signatureAbout">
       <img src="signature.png" alt="Joe Lino Murillo Signature">
     </div>
