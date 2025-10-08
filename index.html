@@ -50,15 +50,19 @@
     h2 { text-align:center; font-size:1.8em; margin-bottom:40px; font-weight:500; }
 
     /* Featured Projects Section */
-    section#projects {
-      background: #fff; /* white background */
+    .projects-wrapper {
+      background: #fff; /* full-width white background */
+      width: 100%;
+      padding: 60px 20px;
+      box-sizing: border-box;
     }
 
-    section#projects h2 {
+    .projects-wrapper h2 {
       color: #000; /* same color as header background */
     }
 
     .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; }
+
     .project { 
       background:#000; border-radius:10px; width:260px; 
       box-shadow:0 2px 8px rgba(0,0,0,0.3); transition:transform 0.2s ease; 
@@ -107,13 +111,18 @@
     .bio-text { max-width:700px; margin:auto; }
 
     /* Contact Section */
-    section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #333; }
+    section#contact {
+      background:#111; /* full-width black */
+      width:100%;
+      padding:70px 20px;
+      text-align:center;
+    }
     section#contact h2 { margin-bottom:15px; color:#D5B954; }
     section#contact p { color:#EEE; }
 
     /* Signature Section */
     .signature-container {
-      background: #fff; /* white background */
+      background: #fff; /* full-width white */
       text-align: center;
       margin: 60px 0;
       opacity: 0;
@@ -142,77 +151,79 @@
 
   <!-- Featured Projects -->
   <section id="projects">
-    <h2>My Featured Projects</h2>
-    <div class="projects">
+    <div class="projects-wrapper">
+      <h2>My Featured Projects</h2>
+      <div class="projects">
 
-      <div class="project">
-        <a href="https://shopgraceandgoods.com/" target="_blank">
-          <img src="furniture-store.png" alt="Furniture Store Website">
-          <h3><a href="https://shopgraceandgoods.com/" target="_blank">Grace & Goods</a></h3>
-        </a>
-        <p>Modern e-commerce website with smooth UX.</p>
+        <div class="project">
+          <a href="https://shopgraceandgoods.com/" target="_blank">
+            <img src="furniture-store.png" alt="Furniture Store Website">
+            <h3><a href="https://shopgraceandgoods.com/" target="_blank">Grace & Goods</a></h3>
+          </a>
+          <p>Modern e-commerce website with smooth UX.</p>
+        </div>
+
+        <div class="project">
+          <a href="https://brianmitchelldds.com/" target="_blank">
+            <img src="dentistry-site.png" alt="Dentistry Website">
+            <h3><a href="https://brianmitchelldds.com/" target="_blank">Dr. Brian Mitchell & Associates</a></h3>
+          </a>
+          <p>Professional and approachable design.</p>
+        </div>
+
+        <div class="project">
+          <a href="https://westernerproducts.com/" target="_blank">
+            <img src="roofing-site.png" alt="Roofing Website">
+            <h3><a href="https://westernerproducts.com/" target="_blank">Westerner Products</a></h3>
+          </a>
+          <p>Clean business design highlighting services.</p>
+        </div>
+
+        <div class="project">
+          <a href="https://patriot-insurance.com/" target="_blank">
+            <img src="insurance-site.png" alt="Insurance Website">
+            <h3><a href="https://patriot-insurance.com/" target="_blank">Patriots Insurance</a></h3>
+          </a>
+          <p>Clear layout for client coverage options.</p>
+        </div>
+
+        <div class="project">
+          <a href="https://niflaleadershipsummit.com/" target="_blank">
+            <img src="nifla-site.png" alt="NIFLA Website">
+            <h3><a href="https://niflaleadershipsummit.com/" target="_blank">NIFLA Leadership Summit</a></h3>
+          </a>
+          <p>Nonprofit advocacy website built for clarity.</p>
+        </div>
+
+        <div class="project">
+          <a href="https://waterwalkersworldwide.org/" target="_blank">
+            <img src="waterwalkers-site.png" alt="WaterWalkers Website">
+            <h3><a href="https://waterwalkersworldwide.org/" target="_blank">Water Walkers Worldwide</a></h3>
+          </a>
+          <p>Community and faith-based design.</p>
+        </div>
+
+        <div class="project">
+          <a href="https://azgastroenterology.com/" target="_blank">
+            <img src="gastroenterology-site.png" alt="Gastro Website">
+            <h3><a href="https://azgastroenterology.com/" target="_blank">AZ Gastroenterology</a></h3>
+          </a>
+          <p>Clean professional medical layout.</p>
+        </div>
+
+        <div class="project">
+          <a href="https://flutterinc.org/" target="_blank">
+            <img src="flutter-site.png" alt="Flutter Website">
+            <h3><a href="https://flutterinc.org/" target="_blank">Flutter Inc.</a></h3>
+          </a>
+          <p>Modern creative site emphasizing design.</p>
+        </div>
+
       </div>
 
-      <div class="project">
-        <a href="https://brianmitchelldds.com/" target="_blank">
-          <img src="dentistry-site.png" alt="Dentistry Website">
-          <h3><a href="https://brianmitchelldds.com/" target="_blank">Dr. Brian Mitchell & Associates</a></h3>
-        </a>
-        <p>Professional and approachable design.</p>
+      <div style="text-align:center;">
+        <a href="all-projects.html" class="button">See All Projects</a>
       </div>
-
-      <div class="project">
-        <a href="https://westernerproducts.com/" target="_blank">
-          <img src="roofing-site.png" alt="Roofing Website">
-          <h3><a href="https://westernerproducts.com/" target="_blank">Westerner Products</a></h3>
-        </a>
-        <p>Clean business design highlighting services.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://patriot-insurance.com/" target="_blank">
-          <img src="insurance-site.png" alt="Insurance Website">
-          <h3><a href="https://patriot-insurance.com/" target="_blank">Patriots Insurance</a></h3>
-        </a>
-        <p>Clear layout for client coverage options.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://niflaleadershipsummit.com/" target="_blank">
-          <img src="nifla-site.png" alt="NIFLA Website">
-          <h3><a href="https://niflaleadershipsummit.com/" target="_blank">NIFLA Leadership Summit</a></h3>
-        </a>
-        <p>Nonprofit advocacy website built for clarity.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://waterwalkersworldwide.org/" target="_blank">
-          <img src="waterwalkers-site.png" alt="WaterWalkers Website">
-          <h3><a href="https://waterwalkersworldwide.org/" target="_blank">Water Walkers Worldwide</a></h3>
-        </a>
-        <p>Community and faith-based design.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://azgastroenterology.com/" target="_blank">
-          <img src="gastroenterology-site.png" alt="Gastro Website">
-          <h3><a href="https://azgastroenterology.com/" target="_blank">AZ Gastroenterology</a></h3>
-        </a>
-        <p>Clean professional medical layout.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://flutterinc.org/" target="_blank">
-          <img src="flutter-site.png" alt="Flutter Website">
-          <h3><a href="https://flutterinc.org/" target="_blank">Flutter Inc.</a></h3>
-        </a>
-        <p>Modern creative site emphasizing design.</p>
-      </div>
-
-    </div>
-
-    <div style="text-align:center;">
-      <a href="all-projects.html" class="button">See All Projects</a>
     </div>
   </section>
 
