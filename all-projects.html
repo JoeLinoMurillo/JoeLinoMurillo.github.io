@@ -44,7 +44,7 @@
 
     section { max-width:1150px; margin:auto; padding:60px 20px; }
     h2 { text-align:center; font-size:1.8em; margin-bottom:10px; color:#EEE; font-weight:500; }
-    .tagline { text-align:center; color:#CCC; margin-bottom:40px; }
+    .tagline { text-align:center; color:#DDD; margin-bottom:40px; }
 
     .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; margin-bottom:40px; }
     .project { 
@@ -56,15 +56,16 @@
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
 
-    /* Fix link styles for project titles */
     .project h3 a {
-      color: #000;          /* black text */
-      text-decoration: none; /* remove underline */
+      color: #000 !important;        /* force black */
+      text-decoration: none !important; /* remove underline */
       transition: color 0.2s;
       display: inline-block;
       padding-bottom:2px;
     }
-    .project h3 a:hover { color: #333; }
+    .project h3 a:hover {
+      color: #333 !important;
+    }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
@@ -79,21 +80,26 @@
     .category h2 { margin-bottom:10px; }
 
     /* CTA Section */
-    section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #333; margin-bottom:0; }
+    section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #333; margin-bottom:40px; }
     section#contact h2 { margin-bottom:15px; color:#D5B954; }
-    section#contact p { color:#EEE; max-width:700px; margin:auto; }
-    
+    section#contact p { color:#EEE; margin-bottom:20px; }
+
     /* Signature */
     .signature-container {
       text-align: center;
-      margin: 40px 0 80px;
+      margin: 40px 0;
       opacity: 0;
       transition: opacity 2s ease-in-out;
     }
+
     .signature-container img {
-      max-width: 250px; /* slightly smaller */
+      max-width: 250px; /* smaller signature */
     }
-    .signature-container.visible { opacity: 1; }
+
+    .signature-container.visible {
+      opacity: 1;
+    }
+
   </style>
 </head>
 <body>
@@ -101,7 +107,7 @@
   <!-- Header -->
   <header>
     <h1>All Projects</h1>
-    <p>Explore my full portfolio — click any image to visit the website.</p>
+    <p class="tagline">Explore my full portfolio — click any image to visit the website.</p>
   </header>
 
   <!-- Professional Services -->
@@ -216,7 +222,7 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- Call to Action -->
   <section id="contact">
     <h2>Get In Touch</h2>
     <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
