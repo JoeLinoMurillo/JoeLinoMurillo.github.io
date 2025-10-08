@@ -23,6 +23,7 @@
       padding:60px 20px; 
       text-align:center; 
     }
+
     header h1 { 
       margin:0; 
       font-size:2.5em;
@@ -34,67 +35,40 @@
       opacity:0;
       transition: opacity 1.5s ease; 
     }
+
     header h1.visible { opacity:1; }
+
     header p { 
       margin:8px 0 0; 
       font-size:1.4em;
+      font-family: 'Montserrat', sans-serif; 
       color:#D5B954; 
       font-weight:400;
     }
 
-    /* Generic container for centered content */
-    .container {
-      max-width:1150px;
-      margin:auto;
-      padding:0 20px;
-      box-sizing: border-box;
-    }
+    section { max-width:1150px; margin:auto; padding:60px 20px; }
+    h2 { text-align:center; font-size:1.8em; margin-bottom:40px; color:#EEE; font-weight:500; }
 
-    h2 { text-align:center; font-size:1.8em; margin-bottom:40px; font-weight:500; }
-
-    /* Featured Projects */
-    .projects-wrapper {
-      background:#fff;  /* full-width white background */
-      width:100%;
-      padding:60px 0;
-    }
-    .projects-wrapper h2 {
-      color:#000;
-    }
-    .projects {
-      display:grid;
-      grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-      gap:25px;
-      justify-items: center;
-    }
-    @media (max-width:1024px) {
-      .projects {
-        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
-      }
-    }
-    @media (max-width:600px) {
-      .projects {
-        grid-template-columns: 1fr; /* 1 per row on mobile */
-      }
-    }
-
+    .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; }
     .project { 
-      background:#000; border-radius:10px; width:100%; 
+      background:white; border-radius:10px; width:260px; 
       box-shadow:0 2px 8px rgba(0,0,0,0.3); transition:transform 0.2s ease; 
       text-align:center; 
-      color:#fff; 
-      padding-bottom:10px;
+      color:#333; 
     }
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
+
     .project h3 a {
-      color:#D5B954; /* same as name */
-      text-decoration:none; 
-      border-bottom:2px solid #D5B954;
-      display:block; margin:10px 0 5px;
+      color: #333; 
+      text-decoration: none; 
+      transition: color 0.2s;
+      border-bottom: 2px solid #D5B954;
+      padding-bottom:2px;
     }
-    .project h3 a:hover { color:#BFA646; }
-    .project p { font-size:0.9em; color:#fff; padding:0 10px 10px; }
+    .project h3 a:hover { color: #D5B954; }
+
+    .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
     a.button { 
       display:inline-block; background:#D5B954; color:#000; 
@@ -105,44 +79,36 @@
 
     /* About Section */
     section#about { 
-      background:#fff; 
       text-align:center; 
-      padding:60px 20px; 
+      padding-bottom:60px; 
     }
-    section#about h2, .bio-text p { color:#000; }
-    .bio-photo { width:180px; height:180px; border-radius:50%; object-fit:cover; box-shadow:0 2px 10px rgba(0,0,0,0.3); margin-bottom:20px; }
-    .bio-text { max-width:700px; margin:auto; }
+    .bio-photo { 
+      width:180px; height:180px; border-radius:50%; object-fit:cover; 
+      box-shadow:0 2px 10px rgba(0,0,0,0.3); 
+      margin-bottom:20px;
+    }
+    .bio-text { max-width:700px; margin:auto; color:#EEE; }
 
     /* Contact Section */
-    .contact-wrapper {
-      background:#111;
-      width:100%;
-      padding:70px 0;
-      text-align:center;
-      margin:0;
-    }
-    .contact-wrapper h2 { color:#D5B954; margin-bottom:15px; }
-    .contact-wrapper p { color:#EEE; }
-    .contact-wrapper .button {
-      display:inline-block; /* normal size button */
-      margin:20px 0 0;
+    section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #333; }
+    section#contact h2 { margin-bottom:15px; color:#D5B954; }
+    section#contact p { color:#EEE; }
+
+    /* Signature */
+    .signature-container {
+      text-align: center;
+      margin: 60px 0;
+      opacity: 0;
+      transition: opacity 2s ease-in-out; /* smoother 2s fade-in */
     }
 
-    /* Signature Section */
-    .signature-container {
-      background:#fff;
-      width:100%;
-      text-align:center;
-      margin:0; /* starts immediately after contact */
-      opacity:0;
-      transition:opacity 2s ease-in-out;
-      padding:40px 0;
-    }
     .signature-container img {
-      max-width:300px;
-      filter: brightness(0) invert(0);
+      max-width: 300px;
     }
-    .signature-container.visible { opacity:1; }
+
+    .signature-container.visible {
+      opacity: 1;
+    }
 
   </style>
 </head>
@@ -155,48 +121,80 @@
   </header>
 
   <!-- Featured Projects -->
-  <div class="projects-wrapper">
-    <div class="container">
-      <h2>My Featured Projects</h2>
-      <div class="projects">
-        <div class="project">
-          <a href="#"><img src="furniture-store.png" alt="Furniture Store"><h3>Grace & Goods</h3></a>
-          <p>Modern e-commerce website with smooth UX.</p>
-        </div>
-        <div class="project">
-          <a href="#"><img src="dentistry-site.png" alt="Dentistry Site"><h3>Dr. Brian Mitchell & Associates</h3></a>
-          <p>Professional and approachable design.</p>
-        </div>
-        <div class="project">
-          <a href="#"><img src="roofing-site.png" alt="Roofing Site"><h3>Westerner Products</h3></a>
-          <p>Clean business design highlighting services.</p>
-        </div>
-        <div class="project">
-          <a href="#"><img src="insurance-site.png" alt="Insurance Site"><h3>Patriots Insurance</h3></a>
-          <p>Clear layout for client coverage options.</p>
-        </div>
-        <div class="project">
-          <a href="#"><img src="nifla-site.png" alt="NIFLA Site"><h3>NIFLA Leadership Summit</h3></a>
-          <p>Nonprofit advocacy website built for clarity.</p>
-        </div>
-        <div class="project">
-          <a href="#"><img src="waterwalkers-site.png" alt="WaterWalkers"><h3>Water Walkers Worldwide</h3></a>
-          <p>Community and faith-based design.</p>
-        </div>
-        <div class="project">
-          <a href="#"><img src="gastroenterology-site.png" alt="Gastro Site"><h3>AZ Gastroenterology</h3></a>
-          <p>Clean professional medical layout.</p>
-        </div>
-        <div class="project">
-          <a href="#"><img src="flutter-site.png" alt="Flutter"><h3>Flutter Inc.</h3></a>
-          <p>Modern creative site emphasizing design.</p>
-        </div>
+  <section>
+    <h2>My Featured Projects</h2>
+    <div class="projects">
+
+      <div class="project">
+        <a href="https://shopgraceandgoods.com/" target="_blank">
+          <img src="furniture-store.png" alt="Furniture Store Website">
+          <h3><a href="https://shopgraceandgoods.com/" target="_blank">Grace & Goods</a></h3>
+        </a>
+        <p>Modern e-commerce website with smooth UX.</p>
       </div>
-      <div style="text-align:center;">
-        <a href="all-projects.html" class="button">See All Projects</a>
+
+      <div class="project">
+        <a href="https://brianmitchelldds.com/" target="_blank">
+          <img src="dentistry-site.png" alt="Dentistry Website">
+          <h3><a href="https://brianmitchelldds.com/" target="_blank">Dr. Brian Mitchell & Associates</a></h3>
+        </a>
+        <p>Professional and approachable design.</p>
       </div>
+
+      <div class="project">
+        <a href="https://westernerproducts.com/" target="_blank">
+          <img src="roofing-site.png" alt="Roofing Website">
+          <h3><a href="https://westernerproducts.com/" target="_blank">Westerner Products</a></h3>
+        </a>
+        <p>Clean business design highlighting services.</p>
+      </div>
+
+      <div class="project">
+        <a href="https://patriot-insurance.com/" target="_blank">
+          <img src="insurance-site.png" alt="Insurance Website">
+          <h3><a href="https://patriot-insurance.com/" target="_blank">Patriots Insurance</a></h3>
+        </a>
+        <p>Clear layout for client coverage options.</p>
+      </div>
+
+      <div class="project">
+        <a href="https://niflaleadershipsummit.com/" target="_blank">
+          <img src="nifla-site.png" alt="NIFLA Website">
+          <h3><a href="https://niflaleadershipsummit.com/" target="_blank">NIFLA Leadership Summit</a></h3>
+        </a>
+        <p>Nonprofit advocacy website built for clarity.</p>
+      </div>
+
+      <div class="project">
+        <a href="https://waterwalkersworldwide.org/" target="_blank">
+          <img src="waterwalkers-site.png" alt="WaterWalkers Website">
+          <h3><a href="https://waterwalkersworldwide.org/" target="_blank">Water Walkers Worldwide</a></h3>
+        </a>
+        <p>Community and faith-based design.</p>
+      </div>
+
+      <div class="project">
+        <a href="https://azgastroenterology.com/" target="_blank">
+          <img src="gastroenterology-site.png" alt="Gastro Website">
+          <h3><a href="https://azgastroenterology.com/" target="_blank">AZ Gastroenterology</a></h3>
+        </a>
+        <p>Clean professional medical layout.</p>
+      </div>
+
+      <div class="project">
+        <a href="https://flutterinc.org/" target="_blank">
+          <img src="flutter-site.png" alt="Flutter Website">
+          <h3><a href="https://flutterinc.org/" target="_blank">Flutter Inc.</a></h3>
+        </a>
+        <p>Modern creative site emphasizing design.</p>
+      </div>
+
     </div>
-  </div>
+
+    <div style="text-align:center;">
+      <a href="all-projects.html" class="button">See All Projects</a>
+    </div>
+  </section>
 
   <!-- About Section -->
   <section id="about">
@@ -209,14 +207,12 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <div class="contact-wrapper">
-    <div class="container">
-      <h2>Get In Touch</h2>
-      <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
-      <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
-    </div>
-  </div>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
+    <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
+  </section>
 
   <!-- Signature -->
   <div class="signature-container" id="signature">
@@ -224,11 +220,13 @@
   </div>
 
   <script>
+    // Fade-in header name on load
     window.addEventListener('DOMContentLoaded', () => {
       const headerName = document.querySelector('header h1');
       setTimeout(() => { headerName.classList.add('visible'); }, 300);
     });
 
+    // Fade-in signature when scrolling to bottom
     window.addEventListener('scroll', function() {
       const signature = document.getElementById('signature');
       const rect = signature.getBoundingClientRect();
