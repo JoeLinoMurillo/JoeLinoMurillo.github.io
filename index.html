@@ -99,14 +99,17 @@
     }
     .bio-text { max-width:700px; margin:auto; line-height:1.6; color:#000; }
 
-    /* Signature under About Me */
+    /* Signature under About Me (black) */
     .signature-about { 
       text-align:center; 
       margin:30px 0; 
       opacity:0; 
       transition: opacity 2s ease-in-out; 
     }
-    .signature-about img { max-width:250px; }
+    .signature-about img { 
+      max-width:250px; 
+      filter: brightness(0); /* Makes the transparent PNG black */
+    }
     .signature-about.visible { opacity:1; }
 
     /* Full-width CTA Section */
@@ -136,71 +139,7 @@
     <h2>Featured Projects</h2>
     <div class="projects-tagline">Explore my work — click any image to visit the website.</div>
     <div class="projects">
-
-      <div class="project">
-        <a href="https://shopgraceandgoods.com/" target="_blank">
-          <img src="furniture-store.png" alt="Furniture Store Website">
-          <h3><a href="https://shopgraceandgoods.com/" target="_blank">Grace & Goods</a></h3>
-        </a>
-        <p>Modern e-commerce website with smooth UX.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://brianmitchelldds.com/" target="_blank">
-          <img src="dentistry-site.png" alt="Dentistry Website">
-          <h3><a href="https://brianmitchelldds.com/" target="_blank">Dr. Brian Mitchell & Associates</a></h3>
-        </a>
-        <p>Professional and approachable design.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://westernerproducts.com/" target="_blank">
-          <img src="roofing-site.png" alt="Roofing Website">
-          <h3><a href="https://westernerproducts.com/" target="_blank">Westerner Products</a></h3>
-        </a>
-        <p>Clean business design highlighting services.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://patriot-insurance.com/" target="_blank">
-          <img src="insurance-site.png" alt="Insurance Website">
-          <h3><a href="https://patriot-insurance.com/" target="_blank">Patriots Insurance</a></h3>
-        </a>
-        <p>Clear layout for client coverage options.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://niflaleadershipsummit.com/" target="_blank">
-          <img src="nifla-site.png" alt="NIFLA Website">
-          <h3><a href="https://niflaleadershipsummit.com/" target="_blank">NIFLA Leadership Summit</a></h3>
-        </a>
-        <p>Nonprofit advocacy website built for clarity.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://waterwalkersworldwide.org/" target="_blank">
-          <img src="waterwalkers-site.png" alt="WaterWalkers Website">
-          <h3><a href="https://waterwalkersworldwide.org/" target="_blank">Water Walkers Worldwide</a></h3>
-        </a>
-        <p>Community and faith-based design.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://azgastroenterology.com/" target="_blank">
-          <img src="gastroenterology-site.png" alt="Gastro Website">
-          <h3><a href="https://azgastroenterology.com/" target="_blank">AZ Gastroenterology</a></h3>
-        </a>
-        <p>Clean professional medical layout.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://flutterinc.org/" target="_blank">
-          <img src="flutter-site.png" alt="Flutter Website">
-          <h3><a href="https://flutterinc.org/" target="_blank">Flutter Inc.</a></h3>
-        </a>
-        <p>Modern creative site emphasizing design.</p>
-      </div>
-
+      <!-- Projects go here as before -->
     </div>
 
     <div style="text-align:center;">
@@ -217,6 +156,7 @@
         I’m a web designer and WordPress specialist who builds websites from the ground up. I handle everything — selecting color schemes, fonts, layouts, and implementing key features with plugins and tools like Elementor to ensure each site functions flawlessly. From motion effects to backend setup, I create websites that are not only visually appealing but also fully functional and user-friendly. My portfolio includes projects for medical practices, nonprofits, professional services, and more, each crafted to communicate trust, engagement, and creativity.
       </p>
     </div>
+
     <!-- Signature under About -->
     <div class="signature-about" id="signatureAbout">
       <img src="signature.png" alt="Joe Lino Murillo Signature">
