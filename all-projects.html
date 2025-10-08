@@ -56,13 +56,17 @@
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
 
-    /* Title links black with no underline */
+    /* FIXED: Titles black, no underline */
+    .project h3 {
+      margin:10px 0 5px;
+      font-size:1.1em;
+    }
     .project h3 a {
-      color: #000;         
-      text-decoration: none; 
+      color: #000 !important;          /* Keep black */
+      text-decoration: none !important; /* Remove underline */
     }
     .project h3 a:hover {
-      color: #000; 
+      color: #000 !important;          /* Stay black on hover */
     }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
@@ -74,7 +78,7 @@
     }
     a.button:hover { background:#BFA646; }
 
-    .category { margin-bottom:40px; } /* slightly less space between categories */
+    .category { margin-bottom:50px; } /* Slightly reduced spacing between sections */
     .category h2 { margin-bottom:10px; }
 
     /* CTA & Signature */
@@ -183,7 +187,7 @@
           <img src="tjs-site.png" alt="The Justice Foundation Website">
           <h3>The Justice Foundation</h3>
         </a>
-        <p>Legal advocacy and foundation.</p>
+        <p>Legal advocacy and nonprofit foundation.</p>
       </div>
     </div>
   </section>
@@ -204,7 +208,7 @@
           <img src="pregnancy-site-2.png" alt="North Star Women's Center Website">
           <h3>North Star Women's Center</h3>
         </a>
-        <p>Empowering women-focused support site.</p>
+        <p>Empowering women-focused site.</p>
       </div>
       <div class="project">
         <a href="https://newbeginningspregnancy.org/" target="_blank">
@@ -218,7 +222,7 @@
           <img src="pregnancy-site-4.png" alt="Heartbeat Miami Website">
           <h3>Heartbeat Miami</h3>
         </a>
-        <p>Community-based support website.</p>
+        <p>Community-based pregnancy support website.</p>
       </div>
     </div>
   </section>
