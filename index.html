@@ -72,7 +72,7 @@
       text-decoration: none; 
       transition: color 0.2s;
       padding-bottom:2px;
-      border-bottom: none; /* Removed gold underline */
+      border-bottom: none;
     }
     .project h3 a:hover { color: #BFA646; }
 
@@ -97,7 +97,17 @@
       box-shadow:0 2px 10px rgba(0,0,0,0.3); 
       margin-bottom:20px;
     }
-    .bio-text { max-width:700px; margin:auto; line-height:1.6; text-align:center; }
+    .bio-text { max-width:700px; margin:auto; line-height:1.6; color:#000; }
+
+    /* Signature under About Me */
+    .signature-about { 
+      text-align:center; 
+      margin:30px 0; 
+      opacity:0; 
+      transition: opacity 2s ease-in-out; 
+    }
+    .signature-about img { max-width:250px; }
+    .signature-about.visible { opacity:1; }
 
     /* Full-width CTA Section */
     .cta-container { 
@@ -105,28 +115,12 @@
       text-align:center; 
       padding:70px 20px; 
       background:#111; 
-      margin-top:30px; /* small separation from About Me */
+      margin-top:30px;
     }
     .cta-container h2 { color:#D5B954; margin-bottom:20px; }
     .cta-container p { color:#EEE; font-size:1.1em; margin-bottom:20px; }
     .cta-container a.button { margin-top:0; }
 
-    /* Signature */
-    .signature-container {
-      text-align: center;
-      margin:40px 0 60px;
-    }
-    .signature-container img { max-width:250px; }
-
-    /* Mobile fixes for About Me */
-    @media (max-width: 768px) {
-      section#about .bio-text {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 20px;
-        text-align: center;
-      }
-    }
   </style>
 </head>
 <body>
@@ -223,6 +217,10 @@
         I’m a web designer and WordPress specialist who builds websites from the ground up. I handle everything — selecting color schemes, fonts, layouts, and implementing key features with plugins and tools like Elementor to ensure each site functions flawlessly. From motion effects to backend setup, I create websites that are not only visually appealing but also fully functional and user-friendly. My portfolio includes projects for medical practices, nonprofits, professional services, and more, each crafted to communicate trust, engagement, and creativity.
       </p>
     </div>
+    <!-- Signature under About -->
+    <div class="signature-about" id="signatureAbout">
+      <img src="signature.png" alt="Joe Lino Murillo Signature">
+    </div>
   </section>
 
   <!-- Full-width CTA -->
@@ -232,16 +230,15 @@
     <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
   </div>
 
-  <!-- Signature -->
-  <div class="signature-container">
-    <img src="signature.png" alt="Joe Lino Murillo Signature">
-  </div>
-
   <script>
     // Fade-in header name on load
     window.addEventListener('DOMContentLoaded', () => {
       const headerName = document.querySelector('header h1');
       setTimeout(() => { headerName.classList.add('visible'); }, 300);
+
+      // Fade-in signature under About
+      const signature = document.getElementById('signatureAbout');
+      setTimeout(() => { signature.classList.add('visible'); }, 500);
     });
   </script>
 
