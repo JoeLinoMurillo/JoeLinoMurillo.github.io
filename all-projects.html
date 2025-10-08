@@ -44,7 +44,7 @@
 
     section { max-width:1150px; margin:auto; padding:60px 20px; }
     h2 { text-align:center; font-size:1.8em; margin-bottom:10px; color:#EEE; font-weight:500; }
-    .tagline { text-align:center; color:#DDD; margin-bottom:40px; }
+    .tagline { text-align:center; color:#CCC; margin-bottom:40px; }
 
     .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; margin-bottom:40px; }
     .project { 
@@ -57,12 +57,14 @@
     .project img { width:100%; border-radius:10px 10px 0 0; }
 
     .project h3 a {
-      color: #D5B954; 
+      color: #000; 
       text-decoration: none; 
       transition: color 0.2s;
       padding-bottom:2px;
+      display:block;
+      margin-top:10px;
     }
-    .project h3 a:hover { color: #BFA646; }
+    .project h3 a:hover { color: #D5B954; }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
 
@@ -75,6 +77,25 @@
 
     .category { margin-bottom:80px; }
     .category h2 { margin-bottom:10px; }
+
+    /* CTA & Signature */
+    .cta-section { 
+      background:#111; 
+      text-align:center; 
+      padding:70px 20px; 
+      margin-bottom:0; 
+    }
+    .cta-section h2 { color:#D5B954; margin-bottom:15px; }
+    .cta-section p { color:#EEE; margin-bottom:30px; }
+    .signature-container {
+      text-align:center; 
+      margin:60px 0; 
+      opacity:0; 
+      transition: opacity 2s ease-in-out;
+    }
+    .signature-container img { max-width:250px; }
+    .signature-container.visible { opacity:1; }
+
   </style>
 </head>
 <body>
@@ -82,7 +103,7 @@
   <!-- Header -->
   <header>
     <h1>All Projects</h1>
-    <p>Explore my full portfolio — click any image to visit the website.</p>
+    <p class="tagline">Explore my full portfolio — click any image to visit the website.</p>
   </header>
 
   <!-- Professional Services -->
@@ -197,9 +218,28 @@
     </div>
   </section>
 
-  <div style="text-align:center; margin-bottom:60px;">
-    <a href="index.html" class="button">Back to Home</a>
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Get In Touch</h2>
+    <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
+    <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
+  </section>
+
+  <!-- Signature -->
+  <div class="signature-container" id="signature">
+    <img src="signature.png" alt="Joe Lino Murillo Signature">
   </div>
+
+  <script>
+    // Fade-in signature on scroll
+    window.addEventListener('scroll', function() {
+      const signature = document.getElementById('signature');
+      const rect = signature.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 50){
+        signature.classList.add('visible');
+      }
+    });
+  </script>
 
 </body>
 </html>
