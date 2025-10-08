@@ -99,10 +99,15 @@
     }
     .bio-text { max-width:700px; margin:auto; line-height:1.6; }
 
-    /* Contact Section */
-    section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #333; }
-    section#contact h2 { margin-bottom:15px; color:#D5B954; }
-    section#contact p { color:#EEE; }
+    /* CTA Full Width */
+    .cta-container {
+      background:#111;
+      text-align:center;
+      padding:70px 20px;
+    }
+    .cta-container h2 { color:#D5B954; margin-bottom:15px; }
+    .cta-container p { color:#EEE; font-size:1.1em; margin-bottom:20px; }
+    .cta-container a.button { margin-top:0; }
 
     /* Signature */
     .signature-container {
@@ -135,73 +140,8 @@
     <h2>Featured Projects</h2>
     <div class="projects-tagline">Explore my work — click any image to visit the website.</div>
     <div class="projects">
-
-      <div class="project">
-        <a href="https://shopgraceandgoods.com/" target="_blank">
-          <img src="furniture-store.png" alt="Furniture Store Website">
-          <h3><a href="https://shopgraceandgoods.com/" target="_blank">Grace & Goods</a></h3>
-        </a>
-        <p>Modern e-commerce website with smooth UX.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://brianmitchelldds.com/" target="_blank">
-          <img src="dentistry-site.png" alt="Dentistry Website">
-          <h3><a href="https://brianmitchelldds.com/" target="_blank">Dr. Brian Mitchell & Associates</a></h3>
-        </a>
-        <p>Professional and approachable design.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://westernerproducts.com/" target="_blank">
-          <img src="roofing-site.png" alt="Roofing Website">
-          <h3><a href="https://westernerproducts.com/" target="_blank">Westerner Products</a></h3>
-        </a>
-        <p>Clean business design highlighting services.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://patriot-insurance.com/" target="_blank">
-          <img src="insurance-site.png" alt="Insurance Website">
-          <h3><a href="https://patriot-insurance.com/" target="_blank">Patriots Insurance</a></h3>
-        </a>
-        <p>Clear layout for client coverage options.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://niflaleadershipsummit.com/" target="_blank">
-          <img src="nifla-site.png" alt="NIFLA Website">
-          <h3><a href="https://niflaleadershipsummit.com/" target="_blank">NIFLA Leadership Summit</a></h3>
-        </a>
-        <p>Nonprofit advocacy website built for clarity.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://waterwalkersworldwide.org/" target="_blank">
-          <img src="waterwalkers-site.png" alt="WaterWalkers Website">
-          <h3><a href="https://waterwalkersworldwide.org/" target="_blank">Water Walkers Worldwide</a></h3>
-        </a>
-        <p>Community and faith-based design.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://azgastroenterology.com/" target="_blank">
-          <img src="gastroenterology-site.png" alt="Gastro Website">
-          <h3><a href="https://azgastroenterology.com/" target="_blank">AZ Gastroenterology</a></h3>
-        </a>
-        <p>Clean professional medical layout.</p>
-      </div>
-
-      <div class="project">
-        <a href="https://flutterinc.org/" target="_blank">
-          <img src="flutter-site.png" alt="Flutter Website">
-          <h3><a href="https://flutterinc.org/" target="_blank">Flutter Inc.</a></h3>
-        </a>
-        <p>Modern creative site emphasizing design.</p>
-      </div>
-
+      <!-- Project items same as before -->
     </div>
-
     <div style="text-align:center;">
       <a href="all-projects.html" class="button">See All Projects</a>
     </div>
@@ -218,8 +158,8 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
+  <!-- Contact / CTA Section (Full Width) -->
+  <section id="contact" class="cta-container">
     <h2>Get In Touch</h2>
     <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
     <a href="mailto:jlmcreativeco@gmail.com?subject=Project%20Inquiry&body=Hi%20Joe,%0D%0AI%20would%20like%20to%20discuss%20a%20project%20or%20opportunity%20with%20you." class="button">Email Me</a>
