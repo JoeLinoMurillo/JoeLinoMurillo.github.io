@@ -46,7 +46,7 @@
     h2 { text-align:center; font-size:1.8em; margin-bottom:10px; color:#EEE; font-weight:500; }
     .tagline { text-align:center; color:#CCC; margin-bottom:40px; font-size:1em; }
 
-    .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; margin-bottom:40px; }
+    .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; margin-bottom:30px; }
     .project { 
       background:white; border-radius:10px; width:260px; 
       box-shadow:0 2px 8px rgba(0,0,0,0.3); transition:transform 0.2s ease; 
@@ -56,17 +56,11 @@
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
 
-    /* FIXED: Titles black, no underline */
     .project h3 {
+      color: #000; 
+      text-decoration: none; 
+      font-size:1.1em; 
       margin:10px 0 5px;
-      font-size:1.1em;
-    }
-    .project h3 a {
-      color: #000 !important;          /* Keep black */
-      text-decoration: none !important; /* Remove underline */
-    }
-    .project h3 a:hover {
-      color: #000 !important;          /* Stay black on hover */
     }
 
     .project p { font-size:0.9em; color:#555; padding:0 10px 15px; }
@@ -78,7 +72,7 @@
     }
     a.button:hover { background:#BFA646; }
 
-    .category { margin-bottom:50px; } /* Slightly reduced spacing between sections */
+    .category { margin-bottom:40px; }
     .category h2 { margin-bottom:10px; }
 
     /* CTA & Signature */
@@ -159,7 +153,7 @@
           <img src="waterwalkers-site.png" alt="WaterWalkers Website">
           <h3>Water Walkers Worldwide</h3>
         </a>
-        <p>Community-focused and faith-based design.</p>
+        <p>Community-focused and faith-based nonprofit design.</p>
       </div>
       <div class="project">
         <a href="https://flutterinc.org/" target="_blank">
@@ -187,7 +181,7 @@
           <img src="tjs-site.png" alt="The Justice Foundation Website">
           <h3>The Justice Foundation</h3>
         </a>
-        <p>Legal advocacy and nonprofit foundation.</p>
+        <p>Legal advocacy foundation.</p>
       </div>
     </div>
   </section>
