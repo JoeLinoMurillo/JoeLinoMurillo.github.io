@@ -72,7 +72,7 @@
       text-decoration: none; 
       transition: color 0.2s;
       padding-bottom:2px;
-      border-bottom: none;
+      border-bottom: none; /* Removed gold underline */
     }
     .project h3 a:hover { color: #BFA646; }
 
@@ -91,7 +91,6 @@
       padding-bottom:60px; 
       background:#fff;
       color:#000;
-      margin-top:40px; /* added space from CTA above */
     }
     .bio-photo { 
       width:180px; height:180px; border-radius:50%; object-fit:cover; 
@@ -100,32 +99,25 @@
     }
     .bio-text { max-width:700px; margin:auto; line-height:1.6; }
 
-    /* Contact / CTA Section */
-    section#contact {
-      background:#111;
-      text-align:center;
-      padding:70px 20px;
-      border-top:none;
-      margin-top:0;
+    /* Full-width CTA Section */
+    .cta-container { 
+      width:100%; 
+      text-align:center; 
+      padding:70px 20px; 
+      background:#111; 
+      margin-top:30px; /* small separation from About Me */
     }
-    section#contact h2 { margin-bottom:15px; color:#D5B954; }
-    section#contact p { color:#EEE; }
+    .cta-container p { color:#EEE; font-size:1.1em; margin-bottom:20px; }
+    .cta-container a.button { margin-top:0; }
+
+    /* Contact Section removed since we are using full-width CTA */
 
     /* Signature */
     .signature-container {
       text-align: center;
-      margin: 60px 0;
-      opacity: 0;
-      transition: opacity 2s ease-in-out;
+      margin:40px 0 60px;
     }
-
-    .signature-container img {
-      max-width: 250px;
-    }
-
-    .signature-container.visible {
-      opacity: 1;
-    }
+    .signature-container img { max-width:250px; }
 
   </style>
 </head>
@@ -214,13 +206,6 @@
     </div>
   </section>
 
-  <!-- Get In Touch CTA - Full Width -->
-  <section id="contact">
-    <h2>Get In Touch</h2>
-    <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
-    <a href="mailto:jlmcreativeco@gmail.com?subject=Project%20Inquiry&body=Hi%20Joe,%0D%0AI%20would%20like%20to%20discuss%20a%20project%20or%20opportunity%20with%20you." class="button">Email Me</a>
-  </section>
-
   <!-- About Section -->
   <section id="about">
     <img src="bio-photo.jpg" alt="Joe Lino Murillo" class="bio-photo">
@@ -232,8 +217,14 @@
     </div>
   </section>
 
+  <!-- Full-width CTA -->
+  <div class="cta-container">
+    <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
+    <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
+  </div>
+
   <!-- Signature -->
-  <div class="signature-container" id="signature">
+  <div class="signature-container">
     <img src="signature.png" alt="Joe Lino Murillo Signature">
   </div>
 
@@ -242,15 +233,6 @@
     window.addEventListener('DOMContentLoaded', () => {
       const headerName = document.querySelector('header h1');
       setTimeout(() => { headerName.classList.add('visible'); }, 300);
-    });
-
-    // Fade-in signature when scrolling to bottom
-    window.addEventListener('scroll', function() {
-      const signature = document.getElementById('signature');
-      const rect = signature.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 50){
-        signature.classList.add('visible');
-      }
     });
   </script>
 
