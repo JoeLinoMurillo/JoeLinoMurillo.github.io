@@ -6,50 +6,56 @@
   <title>Joe Lino Murillo - Web Design Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* General Styles */
-    body { font-family: "Montserrat", Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
-    a { text-decoration:none; color:inherit; }
+    body { font-family: "Montserrat", Arial, sans-serif; margin:0; padding:0; background:#121212; color:#fff; }
+    header { background:#0b0b0b; color:#D5B954; padding:60px 20px; text-align:center; }
+    header h1 { margin:0; font-size:3em; font-weight:600; letter-spacing:2px; text-transform:uppercase; }
+    header p { margin:15px 0 0; font-size:1.2em; color:#D5B954; }
 
-    /* Header */
-    header { background:#000; color:#D5B954; padding:80px 20px; text-align:center; }
-    header h1 { margin:0; font-size:3em; font-weight:600; letter-spacing:1px; text-transform:uppercase; }
-    header p { margin:15px 0 0; font-size:1.4em; color:#D5B954; }
-
-    /* About Me */
-    section#about { max-width:900px; margin:auto; padding:60px 20px; text-align:center; }
-    section#about img.bio-photo { 
-      width:180px; height:180px; border-radius:50%; object-fit:cover; margin-bottom:20px; box-shadow:0 2px 10px rgba(0,0,0,0.3);
-    }
-    @media (max-width:768px) { section#about img.bio-photo { width:140px; height:140px; } }
-    @media (max-width:480px) { section#about img.bio-photo { width:120px; height:120px; } }
-
-    section#about p { font-size:1.1em; line-height:1.7; color:#eee; max-width:700px; margin:auto; }
-
-    /* Featured Projects */
-    section#projects { max-width:1150px; margin:auto; padding:60px 20px; }
+    section { max-width:1150px; margin:auto; padding:60px 20px; }
     h2 { text-align:center; font-size:2em; margin-bottom:40px; color:#D5B954; }
+
     .projects { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; }
-    .project { background:#111; border-radius:10px; width:260px; box-shadow:0 2px 10px rgba(0,0,0,0.3); transition:transform 0.2s ease; text-align:center; }
+    .project { background:#1c1c1c; border-radius:10px; width:260px; box-shadow:0 2px 8px rgba(0,0,0,0.4); transition:transform 0.2s ease; text-align:center; }
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
-    .project h3 { margin:12px 0 5px; font-size:1.1em; color:#D5B954; border-bottom:2px solid #D5B954; display:inline-block; padding-bottom:4px; }
+    .project h3 { margin:12px 0 5px; font-size:1.1em; color:#D5B954; text-decoration: underline; text-underline-offset:4px; }
     .project p { font-size:0.9em; color:#ccc; padding:0 10px 15px; }
 
-    /* Buttons */
-    a.button { display:inline-block; background:#D5B954; color:#000; padding:12px 28px; border-radius:6px; font-weight:600; margin-top:30px; transition:background 0.2s; }
-    a.button:hover { background:#bfa33d; }
+    a.button { display:inline-block; background:#D5B954; color:#0b0b0b; padding:12px 28px; border-radius:6px; text-decoration:none; font-weight:600; margin-top:30px; transition:background 0.2s; }
+    a.button:hover { background:#bfa642; }
 
-    /* Contact */
-    section#contact { background:#111; text-align:center; padding:70px 20px; border-top:1px solid #222; color:#eee; }
-    section#contact h2 { margin-bottom:15px; color:#D5B954; }
-    section#contact a.button { color:#000; background:#D5B954; }
-    section#contact a.button:hover { background:#bfa33d; }
+    section#about img.bio-photo { width:150px; height:150px; border-radius:50%; display:block; margin:0 auto 20px; }
 
-    /* Signature */
-    .signature-container { text-align:center; margin:60px 0; opacity:0; transition:opacity 3s ease; }
+    .signature-container {
+      margin-top: 40px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
     .signature-container img { max-width:250px; width:80%; height:auto; }
-    @media (max-width:480px) { .signature-container img { max-width:180px; } }
 
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+    section#contact { background:#1c1c1c; text-align:center; padding:70px 20px; border-top:1px solid #333; }
+    section#contact h2 { margin-bottom:15px; }
+    
+    /* Project link color fix */
+    .project a h3 {
+      color: #D5B954;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width:768px) {
+      .project { width:45%; }
+      section#about img.bio-photo { width:140px; height:140px; }
+    }
+    @media (max-width:480px) {
+      .project { width:90%; }
+      section#about img.bio-photo { width:120px; height:120px; }
+      header h1 { font-size:2.2em; }
+      header p { font-size:1.1em; }
+    }
   </style>
 </head>
 <body>
@@ -57,11 +63,11 @@
   <!-- Header -->
   <header>
     <h1>Joe Lino Murillo</h1>
-    <p>Web Designer & WordPress Specialist</p>
+    <p>Web Designer & WordPress Developer</p>
   </header>
 
   <!-- Featured Projects -->
-  <section id="projects">
+  <section>
     <h2>My Featured Projects</h2>
     <div class="projects">
 
@@ -69,7 +75,7 @@
       <div class="project">
         <a href="https://shopgraceandgoods.com/" target="_blank">
           <img src="furniture-store.png" alt="Furniture Store Website">
-          <h3>Grace and Goods</h3>
+          <h3>Furniture Store</h3>
         </a>
         <p>Modern e-commerce website with product showcase and smooth UX.</p>
       </div>
@@ -78,7 +84,7 @@
       <div class="project">
         <a href="https://brianmitchelldds.com/" target="_blank">
           <img src="dentistry-site.png" alt="Dentistry Website">
-          <h3>Dr. Brian Mitchell & Associates</h3>
+          <h3>Dentistry Site</h3>
         </a>
         <p>Professional and approachable design for a dental practice.</p>
       </div>
@@ -87,7 +93,7 @@
       <div class="project">
         <a href="https://westernerproducts.com/" target="_blank">
           <img src="roofing-site.png" alt="Roofing Website">
-          <h3>Westerner Products</h3>
+          <h3>Roofing Site</h3>
         </a>
         <p>Clean business design highlighting services and customer trust.</p>
       </div>
@@ -96,7 +102,7 @@
       <div class="project">
         <a href="https://patriot-insurance.com/" target="_blank">
           <img src="insurance-site.png" alt="Insurance Website">
-          <h3>Patriots Insurance</h3>
+          <h3>Insurance Site</h3>
         </a>
         <p>Clear, informative layout for clients comparing coverage options.</p>
       </div>
@@ -105,7 +111,7 @@
       <div class="project">
         <a href="https://niflaleadershipsummit.com/" target="_blank">
           <img src="nifla-site.png" alt="NIFLA Website">
-          <h3>NIFLA Leadership Summit</h3>
+          <h3>NIFLA Site</h3>
         </a>
         <p>Nonprofit advocacy website built for clarity and engagement.</p>
       </div>
@@ -114,7 +120,7 @@
       <div class="project">
         <a href="https://waterwalkersworldwide.org/" target="_blank">
           <img src="waterwalkers-site.png" alt="WaterWalkers Website">
-          <h3>Water Walkers</h3>
+          <h3>WaterWalkers Site</h3>
         </a>
         <p>Community outreach and faith-based design focused on impact.</p>
       </div>
@@ -123,7 +129,7 @@
       <div class="project">
         <a href="https://azgastroenterology.com/" target="_blank">
           <img src="gastroenterology-site.png" alt="Gastro Website">
-          <h3>AZ Gastroenterology</h3>
+          <h3>Gastrologist Site</h3>
         </a>
         <p>Clean and professional medical layout with strong UX.</p>
       </div>
@@ -132,50 +138,40 @@
       <div class="project">
         <a href="https://flutterinc.org/" target="_blank">
           <img src="flutter-site.png" alt="Flutter Website">
-          <h3>Flutter</h3>
+          <h3>Flutter Site</h3>
         </a>
         <p>Modern creative site emphasizing design and user flow.</p>
       </div>
 
     </div>
+
     <div style="text-align:center;">
       <a href="all-projects.html" class="button">See All Projects</a>
     </div>
   </section>
 
-  <!-- About Me -->
+  <!-- About -->
   <section id="about">
     <img src="bio-photo.jpg" alt="Joe Lino Murillo" class="bio-photo">
-    <p>
-      I’m a web designer and WordPress specialist focused on building clean, modern, and fully functional websites. 
-      From design to backend setup and plugin configuration, I craft websites from the ground up, choosing the color 
-      scheme, fonts, and motion features. I ensure every site works seamlessly, using Elementor and other tools to 
-      create an engaging user experience for businesses and nonprofits.
+    <h2>About Me</h2>
+    <p style="max-width:700px; margin:auto; text-align:center;">
+      I’m a web designer and WordPress professional focused on building clean, modern, and responsive websites.  
+      From design to backend setup and plugin configuration, I handle almost every aspect of website creation using tools like Elementor and various WordPress plugins to bring brands to life online.  
+      My portfolio includes projects for medical practices, professional services, and nonprofit organizations—each crafted to communicate trust, functionality, and a strong user experience.
     </p>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <h2>Get In Touch</h2>
-    <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
+    <p>Get in touch with me to discuss opportunities or projects.</p>
     <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
+
+    <!-- Signature -->
+    <div class="signature-container">
+      <img src="signature.png" alt="Joe Lino Murillo Signature">
+    </div>
   </section>
-
-  <!-- Signature -->
-  <div class="signature-container" id="signature">
-    <img src="signature.png" alt="Joe Lino Murillo Signature">
-  </div>
-
-  <script>
-    // Fade in signature when scrolled into view
-    const signature = document.getElementById('signature');
-    window.addEventListener('scroll', () => {
-      const rect = signature.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 50) {
-        signature.style.opacity = 1;
-      }
-    });
-  </script>
 
 </body>
 </html>
