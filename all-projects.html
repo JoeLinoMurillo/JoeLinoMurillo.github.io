@@ -45,7 +45,7 @@
     section { 
       max-width:1150px; 
       margin:auto; 
-      padding:40px 20px; /* reduced from 60px */
+      padding:40px 20px; 
     }
 
     h2 { 
@@ -56,19 +56,12 @@
       font-weight:500; 
     }
 
-    .tagline { 
-      text-align:center; 
-      color:#CCC; 
-      margin-bottom:40px; 
-      font-size:1em; 
-    }
-
     .projects { 
       display:flex; 
       flex-wrap:wrap; 
-      gap:20px; /* tighter */
+      gap:20px; 
       justify-content:center; 
-      margin-bottom:20px; /* reduced */
+      margin-bottom:20px; 
     }
 
     .project { 
@@ -123,9 +116,8 @@
     }
 
     .category { 
-      margin-bottom:20px; /* tighter */
-      padding-top:30px; /* reduced */
-      /* removed border-bottom divider */
+      margin-bottom:20px; 
+      padding-top:30px; 
     }
 
     .category h2 { 
@@ -150,13 +142,19 @@
       margin-top:0; 
     }
 
-    .signature-container {
-      text-align: center;
-      margin:40px 0 60px;
+    .cta-signature {
+      text-align:center;
+      margin-top:30px;
     }
 
-    .signature-container img { 
-      max-width:250px; 
+    .cta-signature img {
+      max-width:250px;
+      opacity:0;
+      transition:opacity 2s ease-in-out;
+    }
+
+    .cta-signature.visible img {
+      opacity:1;
     }
 
     @media (max-width: 768px) {
@@ -304,17 +302,23 @@
   <div class="cta-container">
     <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
     <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
-  </div>
-
-  <!-- Signature -->
-  <div class="signature-container">
-    <img src="signature.png" alt="Joe Lino Murillo Signature">
+    <div class="cta-signature" id="ctaSignature">
+      <img src="signature.png" alt="Joe Lino Murillo Signature">
+    </div>
   </div>
 
   <!-- Back to Home -->
   <div style="text-align:center; margin-bottom:80px;">
     <a href="index.html" class="button" style="background:#000; color:#D5B954; border:2px solid #D5B954;">Back to Home</a>
   </div>
+
+  <script>
+    // Fade in signature in CTA
+    window.addEventListener('DOMContentLoaded', () => {
+      const sig = document.getElementById('ctaSignature');
+      setTimeout(() => sig.classList.add('visible'), 400);
+    });
+  </script>
 
 </body>
 </html>
