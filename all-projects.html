@@ -127,11 +127,9 @@
     /* CTA & Signature */
     .cta-container { 
       text-align:center; 
-      padding:70px 20px; 
+      padding:70px 20px 50px; /* reduced bottom padding to bring signature closer */
       background:#111; 
       margin-top:0; 
-      position: relative;
-      min-height: 300px; /* fixed CTA container height */
     }
 
     .cta-container p { 
@@ -145,17 +143,27 @@
     }
 
     .cta-signature {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 60px; /* adjust signature distance from bottom */
-      max-width:220px; /* slightly smaller */
+      text-align:center;
+      margin-top:20px; /* slightly reduced */
+    }
+
+    .cta-signature img {
+      max-width:230px; /* slightly smaller */
       opacity:0;
       transition:opacity 2s ease-in-out;
     }
 
-    .cta-signature.visible {
+    .cta-signature.visible img {
       opacity:1;
+    }
+
+    /* Back to Home Container */
+    .back-home-container {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:120px; /* centers button vertically in container */
+      margin-bottom:40px;
     }
 
     @media (max-width: 768px) {
@@ -309,7 +317,7 @@
   </div>
 
   <!-- Back to Home -->
-  <div style="text-align:center; margin:50px 0 80px;">
+  <div class="back-home-container">
     <a href="index.html" class="button" style="background:#000; color:#D5B954; border:2px solid #D5B954;">Back to Home</a>
   </div>
 
