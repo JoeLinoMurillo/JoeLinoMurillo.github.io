@@ -27,7 +27,6 @@
     header h1 { 
       margin:0; 
       font-size:2.5em;
-      font-family: 'Montserrat', sans-serif;
       color:#D5B954; 
       font-weight:600;  
       text-transform: uppercase; 
@@ -36,8 +35,7 @@
 
     header p { 
       margin:8px 0 0; 
-      font-size:1.4em;
-      font-family: 'Montserrat', sans-serif; 
+      font-size:1.4em; 
       color:#D5B954; 
       font-weight:400;
     }
@@ -144,7 +142,7 @@
 
     .cta-signature {
       text-align:center;
-      margin-top:25px; /* slightly lower */
+      margin-top:35px; /* slightly lowered */
     }
 
     .cta-signature img {
@@ -166,11 +164,32 @@
       margin-bottom:40px;
     }
 
-    .back-home-container a.button::before {
-      content: "← ";
-      color: #FFF;
-      margin-right:6px;
-      font-weight:600;
+    /* Back to Home Button with arrow */
+    .back-home-button {
+      display: inline-flex;
+      align-items: center;
+      background: #000;
+      color: #D5B954;
+      border: 2px solid #D5B954;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .back-home-button:hover {
+      background: #111;
+    }
+
+    .back-home-button .arrow {
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .back-home-button:hover .arrow {
+      transform: translateX(-5px);
     }
 
     @media (max-width: 768px) {
@@ -325,7 +344,9 @@
 
   <!-- Back to Home -->
   <div class="back-home-container">
-    <a href="index.html" class="button" style="background:#000; color:#D5B954; border:2px solid #D5B954;">Back to Home</a>
+    <a href="index.html" class="back-home-button">
+      <span class="arrow">&#8592;</span> Back to Home
+    </a>
   </div>
 
   <script>
