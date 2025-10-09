@@ -42,7 +42,6 @@
 
     section { max-width:1150px; margin:auto; padding:40px 20px; }
     h2 { text-align:center; font-size:1.8em; margin-bottom:15px; color:#EEE; font-weight:500; }
-    .tagline { text-align:center; color:#CCC; margin-bottom:30px; font-size:1em; }
 
     .projects { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-bottom:20px; }
     .project { 
@@ -53,16 +52,8 @@
     }
     .project:hover { transform:translateY(-5px); }
     .project img { width:100%; border-radius:10px 10px 0 0; }
-
-    .project h3 {
-      color: #000; 
-      text-decoration: none; 
-      font-size:1.1em; 
-      margin:10px 0 5px;
-    }
-
+    .project h3 { color: #000; font-size:1.1em; margin:10px 0 5px; }
     .project a { color: #000 !important; text-decoration:none !important; }
-
     .project p { font-size:0.9em; color:#555; padding:0 10px 10px; }
 
     a.button { 
@@ -73,7 +64,6 @@
     a.button:hover { background:#BFA646; }
 
     .category { margin-bottom:30px; }
-    .category h2 { margin-bottom:10px; }
 
     /* CTA & Signature */
     .cta-container { 
@@ -85,9 +75,10 @@
     .cta-container p { color:#EEE; font-size:1.1em; margin-bottom:20px; }
     .cta-container a.button { margin-top:0; }
 
+    /* Signature inside CTA */
     .cta-container .signature-container {
-      margin:20px auto 10px; /* reduced spacing below signature */
-      max-width:200px; /* slightly smaller */
+      margin:10px auto 10px; /* reduced spacing below signature */
+      max-width:180px; /* slightly smaller */
     }
     .cta-container .signature-container img { width:100%; }
 
@@ -237,7 +228,7 @@
     </div>
   </section>
 
-  <!-- Call to Action -->
+  <!-- Call to Action with Signature -->
   <div class="cta-container">
     <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
     <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
