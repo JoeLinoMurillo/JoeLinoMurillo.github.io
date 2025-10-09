@@ -27,6 +27,7 @@
     header h1 { 
       margin:0; 
       font-size:2.5em;
+      font-family: 'Montserrat', sans-serif;
       color:#D5B954; 
       font-weight:600;  
       text-transform: uppercase; 
@@ -36,61 +37,130 @@
     header p { 
       margin:8px 0 0; 
       font-size:1.4em;
+      font-family: 'Montserrat', sans-serif; 
       color:#D5B954; 
       font-weight:400;
     }
 
-    section { max-width:1150px; margin:auto; padding:40px 20px; }
-    h2 { text-align:center; font-size:1.8em; margin-bottom:15px; color:#EEE; font-weight:500; }
+    section { 
+      max-width:1150px; 
+      margin:auto; 
+      padding:40px 20px; 
+    }
 
-    .projects { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-bottom:20px; }
+    h2 { 
+      text-align:center; 
+      font-size:1.8em; 
+      margin-bottom:10px; 
+      color:#EEE; 
+      font-weight:500; 
+    }
+
+    .projects { 
+      display:flex; 
+      flex-wrap:wrap; 
+      gap:20px; 
+      justify-content:center; 
+      margin-bottom:20px; 
+    }
+
     .project { 
-      background:white; border-radius:10px; width:260px; 
-      box-shadow:0 2px 8px rgba(0,0,0,0.3); transition:transform 0.2s ease; 
+      background:white; 
+      border-radius:10px; 
+      width:260px; 
+      box-shadow:0 2px 8px rgba(0,0,0,0.3); 
+      transition:transform 0.2s ease; 
       text-align:center; 
       color:#333; 
     }
+
     .project:hover { transform:translateY(-5px); }
-    .project img { width:100%; border-radius:10px 10px 0 0; }
-    .project h3 { color: #000; font-size:1.1em; margin:10px 0 5px; }
-    .project a { color: #000 !important; text-decoration:none !important; }
-    .project p { font-size:0.9em; color:#555; padding:0 10px 10px; }
+
+    .project img { 
+      width:100%; 
+      border-radius:10px 10px 0 0; 
+    }
+
+    .project h3 {
+      color: #000; 
+      text-decoration: none; 
+      font-size:1.1em; 
+      margin:10px 0 5px;
+    }
+
+    .project a {
+      color: #000 !important;
+      text-decoration: none !important;
+    }
+
+    .project p { 
+      font-size:0.9em; 
+      color:#555; 
+      padding:0 10px 15px; 
+    }
 
     a.button { 
-      display:inline-block; background:#D5B954; color:#000; 
-      padding:12px 28px; border-radius:6px; text-decoration:none; 
-      font-weight:500; margin-top:20px; transition:background 0.2s; 
+      display:inline-block; 
+      background:#D5B954; 
+      color:#000; 
+      padding:12px 28px; 
+      border-radius:6px; 
+      text-decoration:none; 
+      font-weight:500; 
+      margin-top:30px; 
+      transition:background 0.2s; 
     }
-    a.button:hover { background:#BFA646; }
 
-    .category { margin-bottom:30px; }
+    a.button:hover { 
+      background:#BFA646; 
+    }
+
+    .category { 
+      margin-bottom:20px; 
+      padding-top:30px; 
+    }
+
+    .category h2 { 
+      margin-bottom:10px; 
+    }
 
     /* CTA & Signature */
     .cta-container { 
       text-align:center; 
-      padding:60px 20px; 
+      padding:70px 20px; 
       background:#111; 
       margin-top:0; 
     }
-    .cta-container p { color:#EEE; font-size:1.1em; margin-bottom:20px; }
-    .cta-container a.button { margin-top:0; }
 
-    /* Signature inside CTA */
-    .cta-container .signature-container {
-      margin:10px auto 10px; /* reduced spacing below signature */
-      max-width:180px; /* slightly smaller */
+    .cta-container p { 
+      color:#EEE; 
+      font-size:1.1em; 
+      margin-bottom:20px; 
     }
-    .cta-container .signature-container img { width:100%; }
 
-    /* Back to Home Button */
-    .back-home { text-align:center; margin-bottom:60px; }
-    .back-home a { background:#000; color:#D5B954; border:2px solid #D5B954; padding:12px 28px; border-radius:6px; text-decoration:none; font-weight:500; }
-    .back-home a:hover { background:#D5B954; color:#000; }
+    .cta-container a.button { 
+      margin-top:0; 
+    }
 
-    @media screen and (max-width:600px){
+    .cta-signature {
+      text-align:center;
+      margin-top:30px;
+    }
+
+    .cta-signature img {
+      max-width:250px;
+      opacity:0;
+      transition:opacity 2s ease-in-out;
+    }
+
+    .cta-signature.visible img {
+      opacity:1;
+    }
+
+    @media (max-width: 768px) {
       section { padding:30px 15px; }
-      .projects { gap:15px; }
-      a.button { padding:10px 24px; }
+      .category { margin-bottom:15px; padding-top:20px; }
+      .projects { gap:15px; margin-bottom:15px; }
     }
   </style>
 </head>
@@ -228,19 +298,27 @@
     </div>
   </section>
 
-  <!-- Call to Action with Signature -->
+  <!-- Call to Action -->
   <div class="cta-container">
     <p>Let’s talk about your next project or opportunity — I’d love to connect.</p>
     <a href="mailto:jlmcreativeco@gmail.com" class="button">Email Me</a>
-    <div class="signature-container">
+    <div class="cta-signature" id="ctaSignature">
       <img src="signature.png" alt="Joe Lino Murillo Signature">
     </div>
   </div>
 
   <!-- Back to Home -->
-  <div class="back-home">
-    <a href="index.html">Back to Home</a>
+  <div style="text-align:center; margin-bottom:80px;">
+    <a href="index.html" class="button" style="background:#000; color:#D5B954; border:2px solid #D5B954;">Back to Home</a>
   </div>
+
+  <script>
+    // Fade in signature in CTA
+    window.addEventListener('DOMContentLoaded', () => {
+      const sig = document.getElementById('ctaSignature');
+      setTimeout(() => sig.classList.add('visible'), 400);
+    });
+  </script>
 
 </body>
 </html>
