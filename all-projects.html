@@ -130,7 +130,6 @@
       padding:70px 20px 50px; 
       background:#111; 
       margin-top:0; 
-      position:relative;
     }
 
     .cta-container p { 
@@ -145,13 +144,11 @@
 
     .cta-signature {
       text-align:center;
-      margin-top:20px;
-      position:relative;
-      top:14px; /* signature slightly more down */
+      margin-top:25px; /* slightly lower */
     }
 
     .cta-signature img {
-      max-width:230px;
+      max-width:230px; 
       opacity:0;
       transition:opacity 2s ease-in-out;
     }
@@ -165,8 +162,15 @@
       display:flex;
       justify-content:center;
       align-items:center;
-      height:120px; /* centers button vertically in container */
+      height:120px; 
       margin-bottom:40px;
+    }
+
+    .back-home-container a.button::before {
+      content: "← ";
+      color: #FFF;
+      margin-right:6px;
+      font-weight:600;
     }
 
     @media (max-width: 768px) {
