@@ -127,7 +127,7 @@
     /* CTA & Signature */
     .cta-container { 
       text-align:center; 
-      padding:70px 20px 50px; 
+      padding:70px 20px 50px;
       background:#111; 
       margin-top:0; 
     }
@@ -144,7 +144,7 @@
 
     .cta-signature {
       text-align:center;
-      margin-top:25px; /* slightly lower */
+      margin-top:25px;
     }
 
     .cta-signature img {
@@ -166,11 +166,19 @@
       margin-bottom:40px;
     }
 
+    /* Animated white arrow */
     .back-home-container a.button::before {
       content: "← ";
-      color: #FFF;
+      color: #FFF; /* white arrow */
       margin-right:6px;
       font-weight:600;
+      display:inline-block;
+      animation: moveArrow 1s infinite alternate;
+    }
+
+    @keyframes moveArrow {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-4px); }
     }
 
     @media (max-width: 768px) {
@@ -329,7 +337,6 @@
   </div>
 
   <script>
-    // Fade in signature in CTA
     window.addEventListener('DOMContentLoaded', () => {
       const sig = document.getElementById('ctaSignature');
       setTimeout(() => sig.classList.add('visible'), 400);
